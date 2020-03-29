@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container__inner">
+            <div class="container__item">
+            <!-- Menu -->
+            <div class="menu">
+                <div class="menu__inner">
+                    <div class="c-hamburger">
+                        <div class="c-hamburger__inner">
+                            <span class="c-hamburger__item"></span>
+                        </div>
+                    </div>
+                    <div class="lang">
+                        <button class="lang__button">Eng</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <header class="header">
+                    <div class="header__inner">
+                        <a href="index.html">Need for drive</a>
+                        <div class="header__geolocation">
+                            <img src="img/Group.svg" alt="location">
+                            <p>Ульяновск</p>
+                        </div>
+                    </div>
+                </header>  
+                <main class="main">
+                    <div class="main__inner">
+                        <nav class="nav">
+                            <li class="nav-item">
+                                Местоположение
+                                <img src="img/Vector_order_page.svg" alt="Vector_order_page">
+                            </li>
+                            <li class="nav-item">
+                                Модель
+                                <img src="img/Vector_order_page.svg" alt="Vector_order_page">
+                            </li>
+                            <li class="nav-item">
+                                Дополнительно
+                                <img src="img/Vector_order_page.svg" alt="Vector_order_page">
+                            </li>
+                            <li class="nav-item">
+                                Итого
+                            </li>
+                        </nav>
+                        <nav class="nav order-end" style="display: none;">
+                            <p>Заказ номер RU58491823</p>
+                        </nav>
+                        <div class="main__content">
+                            <div class="content__location">
+                                <div class="location__inner">
+                                    <form class="form">
+                                        <div class="form__city">
+                                            <label>Город</label>
+                                            <input type="text" name="city" class="form-input" value="Ульяновск" placeholder="Начните вводить пункт выдачи">
+                                            <img src="img/x.svg" alt="x" name="city">
+                                        </div>
+                                        <div class="form__output">
+                                            <label>Пункт выдачи</label>
+                                            <input type="text" name="output" class="form-input" placeholder="Начните вводить пункт выдачи">
+                                            <img src="img/x.svg" alt="x" name="output">
+                                        </div>
+                                    </form>
+                                    <div class="map-location">
+                                        <h4>Выбрать на карте:</h4>
+                                        <div class="location"></div>
+                                        <img src="img/map.png" alt="map">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="model__inner" style="display: none;">
+                                <div class="model-item">
+                                    <ul class="model-control">
+                                        <li><span></span>Модели</li>
+                                        <li><span></span>Эконом</li>
+                                        <li><span></span>Премиум</li>
+                                    </ul>
+                                    <div class="model-list">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-uppercase">elantra</h5>
+                                                <h6 class="card-subtitle">12 000 - 25 000 ₽</h6>
+                                                <img class="card-img-bottom" src="img/cars/elantra.png" alt="elantra">
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">i30 N</h5>
+                                                <h6 class="card-subtitle">10 000 - 32 000 ₽</h6>
+                                                <img class="card-img-bottom" src="img/cars/i30n.png" alt="i30n">
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-uppercase">creta</h5>
+                                                <h6 class="card-subtitle">12 000 - 25 000 ₽</h6>
+                                                <img class="card-img-bottom" src="img/cars/creta.png" alt="creta">
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title text-uppercase">sonata</h5>
+                                                <h6 class="card-subtitle">10 000 - 32 000 ₽</h6>
+                                                <img class="card-img-bottom" src="img/cars/sonata.png" alt="sonata">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dop__inner" style="display: none;">
+                                <div class="options">
+                                    <h4 class="title">Цвет</h4>
+                                    <div class="options-colors">
+                                        <ul class="colors-item">
+                                            <li><span></span>Любой</li>
+                                            <li><span></span>Красный</li>
+                                            <li><span></span>Голубой</li>
+                                        </ul>
+                                    </div>
+                                    <h4 class="title">Дата аренды</h4>
+                                    <form class="form-rent">
+                                        <div class="form-rent__date">
+                                            <label for="start-rent">C</label>
+                                            <input class="rent-input" type="text" name="start-rent" placeholder="Введите дату и время">
+                                            <img src="img/x.svg" alt="x" name="start-rent">
+                                        </div>
+                                        <div class="form-rent__date">
+                                            <label for="end-rent">По</label>
+                                            <input class="rent-input" type="text" name="end-rent" placeholder="Введите дату и время">
+                                            <img src="img/x.svg" alt="x" name="end-rent">
+                                        </div>
+                                    </form>
+                                    <h4 class="title">Тариф</h4>
+                                    <div class="tarif">
+                                        <ul class="tarif-item">
+                                            <li><span></span>Поминутно, 7₽/мин</li>
+                                            <li><span></span>На сутки, 1999 ₽/сутки</li>
+                                        </ul>
+                                    </div>
+                                    <h4 class="title">Доп услуги</h4>
+                                    <div class="services">
+                                        <div class="services-item">
+                                            <label for="petrol"><input type="checkbox" name="petrol" id="petrol">Полный бак, 500р</label>
+                                        </div>
+                                        <div class="services-item">
+                                            <label for="child-armchair"><input type="checkbox" name="child-armchair" id="child-armchair">Детское кресло, 200р</label>
+                                        </div>
+                                        <div class="services-item">
+                                            <label for="right-steering-wheel"><input type="checkbox" name="right-steering-wheel" id="right-steering-wheel">Правый руль, 1600р</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total__inner" style="display: none;">
+                                <div class="total-item">
+                                    <div class="item-content">
+                                        <div class="content-text">
+                                            <p class="content-text-order">Ваш заказ подтвержден</p>
+                                            <p class="content-text-model">Hyndai, i30 N</p>
+                                            <p class="content-text-number">K 761 HA 73</p>
+                                            <p class="content-text-petrol"><span>Топливо</span> 100%</p>
+                                            <p class="content-text-date"><span>Доступна с </span>12.06.2019 12:00</p>
+                                        </div>
+                                        <div class="content-img">
+                                            <img src="img/cars/i30n.png" alt="i30n">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-window">
+                                <div class="modal__inner">
+                                    <h1>Подтвердить заказ</h1>
+                                    <button class="btn button-accept">Подтвердить</button>
+                                    <button class="btn button-return">Вернуться</button>
+                                </div>
+                            </div>
+                            <div class="content__order">
+                                <div class="order">
+                                    <h4>Ваш заказ:</h4>
+                                    <div class="order__item">
+                                        <p>Пункт выдачи</p>
+                                        <p>......................</p>
+                                        <div class="order__item-location">
+                                            <p class="location-text">Ульяновск</p>
+                                            <p class="location-text">Нариманова, 42</p>
+                                        </div>
+                                    </div>
+                                    <div class="order__item order-model">
+                                        <p>Модель</p>
+                                        <p class="model-text">Creta</p>
+                                    </div>
+                                    <div class="order__item order-color">
+                                        <p>Цвет</p>
+                                        <p class="model-text">Любой</p>
+                                    </div>
+                                    <div class="order__item order-rent">
+                                        <p>Длительность аренды</p>
+                                        <p class="model-text">1 д 2 ч</p>
+                                    </div>
+                                    <div class="order__item order-tarif">
+                                        <p>Тариф</p>
+                                        <p class="model-text">На сутки</p>
+                                    </div>
+                                    <div class="order__item order-petrol">
+                                        <p>Полный бак</p>
+                                        <p class="model-text">Да</p>
+                                    </div>
+                                    <div class="order__item order-child">
+                                        <p>Детское кресло</p>
+                                        <p class="model-text">Да</p>
+                                    </div>
+                                    <div class="order__item order-right">
+                                        <p>Правый руль</p>
+                                        <p class="model-text">Да</p>
+                                    </div>
+                                    <p class="price">Цена: от 8000 до 12000 ₽</p>
+                                    <button class="btn btn-model">Выбрать модель</button>
+                                    <button class="btn btn-dop">Дополнительно</button>
+                                    <button class="btn btn-itog">Итого</button>
+                                    <button class="btn btn-total">Заказать</button>
+                                    <button class="btn btn-cancel">Отменить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
