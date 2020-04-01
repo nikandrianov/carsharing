@@ -35,19 +35,19 @@
                 <main class="main">
                     <div class="main__inner">
                         <nav class="nav">
-                            <li class="nav-item">
+                            <li class="nav-item item-map nav-item__active">
                                 Местоположение
                                 <img src="img/Vector_order_page.svg" alt="Vector_order_page">
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item item-model disabled">
                                 Модель
                                 <img src="img/Vector_order_page.svg" alt="Vector_order_page">
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item item-dop disabled">
                                 Дополнительно
                                 <img src="img/Vector_order_page.svg" alt="Vector_order_page">
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item item-itog disabled">
                                 Итого
                             </li>
                         </nav>
@@ -60,13 +60,13 @@
                                     <form class="form">
                                         <div class="form__city">
                                             <label>Город</label>
-                                            <input type="text" name="city" class="form-input" value="Ульяновск" placeholder="Начните вводить пункт выдачи">
-                                            <img src="img/x.svg" alt="x" name="city">
+                                            <input type="text" id="city" name="city" class="form-input" placeholder="Начните вводить пункт выдачи">
+                                            <img src="img/x.svg" alt="x" name="city" id="clear-x">
                                         </div>
                                         <div class="form__output">
                                             <label>Пункт выдачи</label>
-                                            <input type="text" name="output" class="form-input" placeholder="Начните вводить пункт выдачи">
-                                            <img src="img/x.svg" alt="x" name="output">
+                                            <input type="text" id="output" name="output" class="form-input" placeholder="Начните вводить пункт выдачи">
+                                            <img src="img/x.svg" alt="x" name="output" id="clear-x2">
                                         </div>
                                     </form>
                                     <div class="map-location">
@@ -79,9 +79,9 @@
                             <div class="model__inner" style="display: none;">
                                 <div class="model-item">
                                     <ul class="model-control">
-                                        <li><span></span>Модели</li>
-                                        <li><span></span>Эконом</li>
-                                        <li><span></span>Премиум</li>
+                                        <li class="control-li-model"><span class="control-span-model span__active"></span>Модели</li>
+                                        <li class="control-li-eko"><span class="control-span-eko"></span>Эконом</li>
+                                        <li class="control-li-premium"><span class="control-span-premium"></span>Премиум</li>
                                     </ul>
                                     <div class="model-list">
                                         <div class="card">
@@ -120,7 +120,7 @@
                                     <h4 class="title">Цвет</h4>
                                     <div class="options-colors">
                                         <ul class="colors-item">
-                                            <li><span></span>Любой</li>
+                                            <li><span class="span__active"></span>Любой</li>
                                             <li><span></span>Красный</li>
                                             <li><span></span>Голубой</li>
                                         </ul>
@@ -189,8 +189,8 @@
                                         <p>Пункт выдачи</p>
                                         <p>......................</p>
                                         <div class="order__item-location">
-                                            <p class="location-text">Ульяновск</p>
-                                            <p class="location-text">Нариманова, 42</p>
+                                            <p class="location-text-city"></p>
+                                            <p class="location-text-street"></p>
                                         </div>
                                     </div>
                                     <div class="order__item order-model">

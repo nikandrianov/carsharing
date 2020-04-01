@@ -60,6 +60,9 @@
             .nav-item__active {
                 color: $primary-color;
             }
+            .disabled {
+                pointer-events: none;
+            }
             .nav-item__continue {
                 color: $primary-color-dark;
             }
@@ -292,6 +295,9 @@
                     border: 3px solid $primary-color;
                 } 
             }
+            li:hover {
+                color: $primary-color-dark;
+            }
             li:first-child {
                 margin-left: 0;
             }
@@ -497,6 +503,7 @@
                 font-size: 24px;
                 line-height: 28px;
                 color: $primary-color-dark;
+                display: none;
             }
             .content-text-model {
                 font-size: 18px;
