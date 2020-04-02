@@ -158,3 +158,148 @@ document.querySelector('.control-li-premium').addEventListener('click', function
     document.querySelector('.control-span-model').classList.remove('span__active');
     document.querySelector('.control-span-eko').classList.remove('span__active');
 })
+
+// Выбор машины
+
+document.querySelector('.model-1').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.model-1').classList.add('card-active');
+    document.querySelector('.model-2').classList.remove('card-active');
+    document.querySelector('.model-3').classList.remove('card-active');
+    document.querySelector('.model-4').classList.remove('card-active');
+    document.querySelector('.order-model').style.display = 'flex';
+    let a = document.querySelector('.elantra').innerHTML;
+    document.querySelector('.text-car').innerHTML = 'Hyndai, ' + a;
+})
+
+document.querySelector('.model-2').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.model-1').classList.remove('card-active');
+    document.querySelector('.model-2').classList.add('card-active');
+    document.querySelector('.model-3').classList.remove('card-active');
+    document.querySelector('.model-4').classList.remove('card-active');
+    document.querySelector('.text-car').innerHTML = "";
+    document.querySelector('.order-model').style.display = 'flex';
+    let a = document.querySelector('.i30n').innerHTML;
+    document.querySelector('.text-car').innerHTML = 'Hyndai, ' + a;
+})
+
+document.querySelector('.model-3').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.model-1').classList.remove('card-active');
+    document.querySelector('.model-2').classList.remove('card-active');
+    document.querySelector('.model-3').classList.add('card-active');
+    document.querySelector('.model-4').classList.remove('card-active');
+    document.querySelector('.text-car').innerHTML = "";
+    document.querySelector('.order-model').style.display = 'flex';
+    let a = document.querySelector('.creta').innerHTML;
+    document.querySelector('.text-car').innerHTML = 'Hyndai, ' + a;
+})
+
+document.querySelector('.model-4').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.model-1').classList.remove('card-active');
+    document.querySelector('.model-2').classList.remove('card-active');
+    document.querySelector('.model-3').classList.remove('card-active');
+    document.querySelector('.model-4').classList.add('card-active');
+    document.querySelector('.text-car').innerHTML = "";
+    document.querySelector('.order-model').style.display = 'flex';
+    let a = document.querySelector('.sonata').innerHTML;
+    document.querySelector('.text-car').innerHTML = 'Hyndai, ' + a;
+})
+
+// Выбор цвета
+
+document.querySelector('.colors-li-random').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.colors-span-random').classList.add('span__active');
+    document.querySelector('.colors-span-red').classList.remove('span__active');
+    document.querySelector('.colors-span-blue').classList.remove('span__active');
+    document.querySelector('.order-color').style.display = 'flex';
+    document.querySelector('.text-color').innerHTML = "";
+    let a = document.querySelector('.colors-li-random').innerHTML;
+    document.querySelector('.text-color').innerHTML = a;
+
+})
+
+document.querySelector('.colors-li-red').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.colors-span-random').classList.remove('span__active');
+    document.querySelector('.colors-span-red').classList.add('span__active');
+    document.querySelector('.colors-span-blue').classList.remove('span__active');
+    document.querySelector('.order-color').style.display = 'flex';
+    document.querySelector('.text-color').innerHTML = "";
+    let a = document.querySelector('.colors-li-red').innerHTML;
+    document.querySelector('.text-color').innerHTML = a;
+})
+
+document.querySelector('.colors-li-blue').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.colors-span-random').classList.remove('span__active');
+    document.querySelector('.colors-span-red').classList.remove('span__active');
+    document.querySelector('.colors-span-blue').classList.add('span__active');
+    document.querySelector('.order-color').style.display = 'flex';
+    document.querySelector('.text-color').innerHTML = "";
+    let a = document.querySelector('.colors-li-blue').innerHTML;
+    document.querySelector('.text-color').innerHTML = a;
+})
+
+// Выбор тарифа
+
+document.querySelector('.tarif-li-minut').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.tarif-span-days').classList.remove('span__active');
+    document.querySelector('.tarif-span-minut').classList.add('span__active');
+    document.querySelector('.order-tarif').style.display = 'flex';
+    document.querySelector('.text-tarif').innerHTML = "";
+    let a = document.querySelector('.tarif-li-minut').innerHTML;
+    document.querySelector('.text-tarif').innerHTML = a;
+})
+
+document.querySelector('.tarif-li-days').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector('.tarif-span-days').classList.add('span__active');
+    document.querySelector('.tarif-span-minut').classList.remove('span__active');
+    document.querySelector('.order-tarif').style.display = 'flex';
+    document.querySelector('.text-tarif').innerHTML = "";
+    let a = document.querySelector('.tarif-li-days').innerHTML;
+    document.querySelector('.text-tarif').innerHTML = a;
+})
+
+// Выбор доп услуг
+
+document.querySelector('#petrol').addEventListener('change', function (e) {
+    e.preventDefault();
+    let a = document.querySelector('#petrol');
+    if ( a.checked ) {
+        document.querySelector('.order-petrol').style.display = 'flex';
+        document.querySelector('.text-petrol').innerHTML = "Да";
+    }
+    else {
+        document.querySelector('.order-petrol').style.display = 'none';
+    }
+})
+
+document.querySelector('#child-armchair').addEventListener('change', function (e) {
+    e.preventDefault();
+    let a = document.querySelector('#child-armchair');
+    if ( a.checked ) {
+        document.querySelector('.order-child').style.display = 'flex';
+        document.querySelector('.text-child').innerHTML = "Да";
+    }
+    else {
+        document.querySelector('.order-child').style.display = 'none';
+    }
+})
+
+document.querySelector('#right-steering-wheel').addEventListener('change', function (e) {
+    e.preventDefault();
+    let a = document.querySelector('#right-steering-wheel');
+    if ( a.checked ) {
+        document.querySelector('.order-right').style.display = 'flex';
+        document.querySelector('.text-right').innerHTML = "Да";
+    }
+    else {
+        document.querySelector('.order-right').style.display = 'none';
+    }
+})
