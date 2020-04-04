@@ -1,5 +1,7 @@
 import "../css/main.scss";
 import 'bootstrap';
+import 'jquery';
+import 'popper.js';
 
 document.querySelector('.c-hamburger').addEventListener('click', function (e) {
     e.preventDefault();

@@ -6,13 +6,14 @@
     .content {
         width: 57%;
         .content__inner {
-            padding: 32px 64px;
+            padding: 32px;
         }
     }
 
     .hamburger {
         display: none;
     }
+
     .header__inner {
         display: flex;
         .header__geolocation {
@@ -22,7 +23,6 @@
     }
 
     .main__content {
-        padding: 0 16px;
         h1 {
             font-size: 70px;
             line-height: 100%;
@@ -162,20 +162,21 @@
         margin-top: 32px;
         border-radius: 0;
     }
-
-    .footer__inner {
-        background-color: #151b1f;
-        padding: 16px;
-        flex-direction: column;
-        align-items: flex-end;
-        p {
-            color: $color-grey-light;
-            order: 2;
-            margin-top: 8px;
-        }
-        a {
-            order: 1;
-            color: $primary-color;
+    footer {
+        .footer__inner {
+            background-color: #151b1f;
+            padding: 16px;
+            flex-direction: column;
+            align-items: flex-end;
+            p {
+                color: $color-grey-light;
+                order: 2;
+                margin-top: 8px;
+            }
+            a {
+                order: 1;
+                color: $primary-color;
+            }
         }
     }
 

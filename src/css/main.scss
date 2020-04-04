@@ -5,6 +5,7 @@ $primary-color: #0EC261;
 $primary-color-dark: #121212;
 $color-grey-dark: #999999;
 $color-grey-light: #EEEEEE;
+$white: #ffffff;
 
 * {
     margin: 0;
@@ -57,14 +58,14 @@ body {
             position: absolute;
             width: 100%;
             height: 4px;
-            background: #ffffff;
+            background: $white;
             border-radius: 8px;
         }
         .c-hamburger__item::before, .c-hamburger__item::after {
             position: absolute;
             width: 100%;
             height: 4px;
-            background: #ffffff;
+            background: $white;
             border-radius: 8px;
             content: "";
         }
@@ -95,12 +96,12 @@ body {
                                 
     }
     .lang__button:hover {
-        color: #ffffff;
-        border: 1px solid #ffffff;
+        color: $white;
+        border: 1px solid $white;
         border-radius: 50%; 
     }
     .lang__button:active {
-        border: 1px solid #ffffff;
+        border: 1px solid $white;
         border-radius: 50%;
         color: $primary-color; 
     }
@@ -228,7 +229,7 @@ body {
     font-size: 18px;
     line-height: 21px;
     text-align: center;
-    color: #FFFFFF;
+    color: $white;
     background: linear-gradient(90deg, #0EC261 2.61%, #039F67 112.6%);
     background-blend-mode: darken;
     border-radius: 8px;
@@ -305,7 +306,7 @@ footer {
         font-weight: 500;
         font-size: 40px;
         line-height: 47px;
-        color: #FFFFFF;
+        color: $white;
     }
     p {
         font-family: Roboto;
@@ -315,70 +316,6 @@ footer {
         line-height: 90%;
         color: $color-grey-light;
         margin-top: 8px;
-    }
-    .btn__slide1 {
-        width: 164px;
-        height: 48px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: $color-grey-light;
-        background: linear-gradient(90deg, #13493F 0%, #0C7B1B 100%);
-        border-radius: 4px;
-        margin-top: 32px;
-    }
-    .btn__slide2 {
-        width: 164px;
-        height: 48px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: $color-grey-light;
-        background: linear-gradient(90deg, #132949 0%, #0C7B67 100%);
-        border-radius: 4px;
-        margin-top: 32px;
-    }
-    .btn__slide3 {
-        width: 164px;
-        height: 48px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: $color-grey-light;
-        background: linear-gradient(90deg, #493013 0%, #7B0C3B 100%);
-        border-radius: 4px;
-        margin-top: 32px;
-    }
-    .btn__slide4 {
-        width: 164px;
-        height: 48px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 21px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: $color-grey-light;
-        background: linear-gradient(90deg, #281349 0%, #720C7B 100%);
-        border-radius: 4px;
-        margin-top: 32px;
     }
 }
 
@@ -417,41 +354,42 @@ footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        .burger {
-            cursor: pointer;
-            .burger__inner {
-                width: 32px;
-                height: 32px;
-                position: relative;
-                .burger__item {
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    position: absolute;
-                    width: 100%;
-                    height: 4px;
-                    background-color: transparent;
-                    border-radius: 8px;
-                }
-                .burger__item::before, .burger__item::after {
-                    position: absolute;
-                    width: 100%;
-                    height: 4px;
-                    background: #ffffff;
-                    border-radius: 8px;
-                    content: "";
-                }
-                .burger__item::before {
-                    content: "";
-                    top: 0;
-                    transform: rotate(45deg);
-                }
-                .burger__item::after {
-                    content: "";
-                    top: 0;
-                    transform: rotate(-45deg);
-                }
-            }
+    }
+}
+
+.burger {
+    cursor: pointer;
+    .burger__inner {
+        width: 32px;
+        height: 32px;
+        position: relative;
+        .burger__item {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: transparent;
+            border-radius: 8px;
+        }
+        .burger__item::before, .burger__item::after {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: $white;
+            border-radius: 8px;
+            content: "";
+        }
+        .burger__item::before {
+            content: "";
+            top: 0;
+            transform: rotate(45deg);
+        }
+        .burger__item::after {
+            content: "";
+            top: 0;
+            transform: rotate(-45deg);
         }
     }
 }
@@ -471,7 +409,7 @@ footer {
             font-weight: 500;
             font-size: 32px;
             line-height: 37px;
-            color: #FFFFFF;
+            color: $white;
             margin-top: 10px;
         }
         li:first-child {
@@ -515,8 +453,8 @@ footer {
         height: 48px;
     }
     .lang__button:hover {
-        color: #ffffff;
-        border: 1px solid #ffffff;
+        color: $white;
+        border: 1px solid $white;
         border-radius: 50%; 
     }
     .lang__button:active {
@@ -526,5 +464,6 @@ footer {
     }
 }
 
+@import 'buttons';
 @import 'order';
 @import 'media';

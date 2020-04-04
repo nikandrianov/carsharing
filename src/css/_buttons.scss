@@ -1,0 +1,41 @@
+// Заполнитель
+%btn {
+    width: 164px;
+    height: 48px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $color-grey-light;
+    border-radius: 4px;
+    margin-top: 32px;
+}
+
+// Миксин
+@mixin btn_slide($btn-background) {
+    @extend %btn;
+    background: $btn-background;
+}
+
+// Кнопки
+
+.btn__slide1 {
+    @include btn_slide(linear-gradient(90deg, #13493F 0%, #0C7B1B 100%));
+}
+.btn__slide2 {
+    @include btn_slide(linear-gradient(90deg, #132949 0%, #0C7B67 100%));
+}
+.btn__slide3 {
+    @include btn_slide(linear-gradient(90deg, #493013 0%, #7B0C3B 100%));
+}
+.btn__slide4 {
+    @include btn_slide(linear-gradient(90deg, #281349 0%, #720C7B 100%));
+}
+
+.btn:hover {
+    color: $color-grey-light;
+}
