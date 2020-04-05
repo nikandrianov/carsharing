@@ -73,8 +73,6 @@
 
 .order-end {
     align-items: center;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
@@ -96,7 +94,6 @@
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
-    font-family: "RobotoL";
     margin-top: 32px;
     display: inline-block;
     text-align: right;
@@ -109,6 +106,7 @@
         margin-left: 8px;
         padding: 0 15px 3px 8px;
         border-bottom: 1px solid $color-grey-dark;
+        font-size: 13px;
         width: 224px;
     }
     img {
@@ -129,6 +127,7 @@
         margin-left: 8px;
         padding: 0 15px 3px 8px;
         border-bottom: 1px solid $color-grey-dark;
+        font-size: 13px;
         width: 224px;
     }
     img {
@@ -148,7 +147,6 @@
         font-size: 14px;
         color: $primary-color-dark;
         line-height: 16px;
-        font-family: "RobotoL";
     }
     .location {
         width: 736px;
@@ -167,7 +165,6 @@
     font-size: 18px;
     color: $primary-color-dark;
     line-height: 21px;
-    font-family: "Roboto";
     text-align: right;
     font-weight: 500;
     margin-bottom: 26px;
@@ -181,7 +178,6 @@
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
-    font-family: "Roboto";
 }
                         
 .order__item-location {
@@ -204,88 +200,9 @@
     font-size: 16px;
     color: $primary-color-dark;
     line-height: 16px;
-    font-family: "Roboto";
     margin-top: 32px;
     font-weight: 500;
-}
-                    
-.btn-model {
-    width: 287px;
-    height: 48px;
-    margin-top: 32px;
-    font-size: 18px;
-    color: $white;
-    line-height: 21px;
-    font-weight: 500;
-    background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
-    font-family: "Roboto";
-    background-blend-mode: darken;
-    border-radius: 8px;
-}
-                    
-.btn-dop {
-    width: 287px;
-    height: 48px;
-    margin-top: 32px;
-    font-size: 18px;
-    color: $white;
-    line-height: 21px;
-    font-weight: 500;
-    background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
-    font-family: "Roboto";
-    background-blend-mode: darken;
-    border-radius: 8px;
-    display: none;
-}
-                    
-.btn-itog {
-    width: 287px;
-    height: 48px;
-    margin-top: 32px;
-    font-size: 18px;
-    color: $white;
-    line-height: 21px;
-    font-weight: 500;
-    background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
-    font-family: "Roboto";
-    background-blend-mode: darken;
-    border-radius: 8px;
-    display: none;
-}
-                    
-.btn-total {
-    width: 287px;
-    height: 48px;
-    margin-top: 32px;
-    font-size: 18px;
-    color: $white;
-    line-height: 21px;
-    font-weight: 500;
-    background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
-    font-family: "Roboto";
-    background-blend-mode: darken;
-    border-radius: 8px;
-    display: none;
-}
-                    
-.btn-cancel {
-    width: 287px;
-    height: 48px;
-    margin-top: 32px;
-    font-size: 18px;
-    color: $white;
-    line-height: 21px;
-    font-weight: 500;
-    background: linear-gradient(90deg, #493013 0%, #7B0C3B 100%);
-    font-family: "Roboto";
-    background-blend-mode: darken;
-    border-radius: 8px;
-    display: none;
-}
-                    
-.btn:disabled {
-    background: $color-grey-light;
-}
+}                
 
 .model__inner {
     padding: 0 0 32px 64px;
@@ -300,7 +217,6 @@
         font-size: 14px;
         color: $color-grey-dark;
         line-height: 16px;
-        font-family: "Roboto";
         cursor: pointer;
         span {
             width: 12px;
@@ -313,12 +229,12 @@
         .span__active {
             border: 3px solid $primary-color;
         } 
-        li:hover {
-            color: $primary-color-dark;
-        }
-        li:first-child {
-            margin-left: 0;
-        }
+    }
+    li:hover {
+        color: $primary-color-dark;
+    }
+    li:first-child {
+        margin-left: 0;
     }
 }
             
@@ -376,9 +292,7 @@
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
-    font-family: "Roboto";
     margin-top: 32px;
-    font-style: normal;
     font-weight: 300;
 }
         
@@ -396,7 +310,6 @@
         font-size: 14px;
         color: $color-grey-dark;
         line-height: 16px;
-        font-family: "Roboto";
         cursor: pointer;
         span {
             width: 12px;
@@ -409,12 +322,12 @@
         .span__active {
             border: 3px solid $primary-color;
         } 
-        li:hover {
-            color: $primary-color-dark;
-        }
-        li:first-child {
-            margin-left: 0;
-        }
+    }
+    li:hover {
+        color: $primary-color-dark;
+    }
+    li:first-child {
+        margin-left: 0;
     }
 }
                 
@@ -427,7 +340,6 @@
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
-    font-family: "Roboto";
     display: inline-block;
 }
         
@@ -469,7 +381,6 @@
         font-size: 14px;
         color: $color-grey-dark;
         line-height: 16px;
-        font-family: "Roboto";
         cursor: pointer;
         margin-left: 0;
         margin-top: 8px;
@@ -484,9 +395,9 @@
         .span__active {
             border: 3px solid $primary-color;
         } 
-        li:hover {
-            color: $primary-color-dark;
-        }
+    }
+    li:hover {
+        color: $primary-color-dark;
     }
 }
     
@@ -503,7 +414,6 @@
     font-size: 14px;
     color: $color-grey-dark;
     line-height: 16px;
-    font-family: "Roboto";
     cursor: pointer;
     user-select: none;
     input {
@@ -532,8 +442,6 @@
 }
             
 .content-text-order {
-    font-family: "Roboto";
-    font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
@@ -564,12 +472,10 @@
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
-    font-family: "Roboto";
     margin-top: 8px;
     margin-bottom: 0;
     span {
         font-weight: bold;
-        font-family: "Roboto";
     }
 }
             
@@ -577,12 +483,10 @@
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
-    font-family: "Roboto";
     margin-top: 8px;
     margin-bottom: 0;
     span {
         font-weight: bold;
-        font-family: "Roboto";
     }
     img {
         max-width: 100%;
@@ -619,7 +523,6 @@
     color: $white;
     line-height: 21px;
     background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
-    font-family: "Roboto";
     background-blend-mode: darken;
     padding: 13.5px 0;
     border-radius: 8px;
@@ -637,7 +540,6 @@
     font-size: 18px;
     color: $white;
     line-height: 21px;
-    font-family: "Roboto";
     background-blend-mode: darken;
     padding: 13.5px 0;
     border-radius: 8px;

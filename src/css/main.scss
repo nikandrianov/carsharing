@@ -1,11 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
-
-$primary-color: #0EC261;
-$primary-color-dark: #121212;
-$color-grey-dark: #999999;
-$color-grey-light: #EEEEEE;
-$white: #ffffff;
+@import 'colors';
 
 * {
     margin: 0;
@@ -14,7 +9,8 @@ $white: #ffffff;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-style: normal;
 }
 
 .wrapper {
@@ -83,8 +79,6 @@ body {
 .lang {
     display: block;
     .lang__button {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: bold;
         font-size: 13px;
         line-height: 15px;
@@ -159,8 +153,6 @@ body {
     justify-content: space-between;
     align-items: center;
     .header__logo {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: bold;
         font-size: 30px;
         line-height: 35px;
@@ -177,8 +169,6 @@ body {
             display: block;
         }
         p {
-            font-family: Roboto;
-            font-style: normal;
             font-weight: normal;
             font-size: 14px;
             line-height: 16px;
@@ -192,16 +182,12 @@ body {
 .main__content {
     margin-top: 10px;
     h1 {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: bold;
         font-size: 70px;
         line-height: 66px;
         color: $primary-color-dark;
     }
     h2 {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: bold;
         font-size: 70px;
         line-height: 66px;
@@ -209,8 +195,6 @@ body {
         margin-top: 4px;
     }
     p {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: 300;
         font-size: 26px;
         line-height: 30px;
@@ -223,8 +207,6 @@ body {
     width: 250px;
     height: 48px;
     mix-blend-mode: normal;
-    font-family: Roboto;
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 21px;
@@ -242,8 +224,6 @@ footer {
         justify-content: space-between;
         margin-top: 10px;
         p {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: normal;
         font-size: 13px;
         line-height: 15px;
@@ -251,8 +231,6 @@ footer {
         margin-bottom: 0;
         }
         a {
-            font-family: Roboto;
-            font-style: normal;
             font-weight: normal;
             font-size: 13px;
             line-height: 15px;
@@ -301,16 +279,12 @@ footer {
     top: 227px;
     text-align: left;
     h3 {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: 500;
         font-size: 40px;
         line-height: 47px;
         color: $white;
     }
     p {
-        font-family: Roboto;
-        font-style: normal;
         font-weight: 300;
         font-size: 24px;
         line-height: 90%;
@@ -404,8 +378,6 @@ footer {
         list-style: none;
         li {
             cursor: pointer;
-            font-family: Roboto;
-            font-style: normal;
             font-weight: 500;
             font-size: 32px;
             line-height: 37px;
@@ -436,32 +408,6 @@ footer {
         }
     }
 
-}
-
-.lang {
-    display: none;
-    .lang__button {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 13px;
-        line-height: 15px;
-        color: $primary-color;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        background-color: transparent;
-        width: 48px;
-        height: 48px;
-    }
-    .lang__button:hover {
-        color: $white;
-        border: 1px solid $white;
-        border-radius: 50%; 
-    }
-    .lang__button:active {
-        border: 1px solid #fff;
-        border-radius: 50%;
-        color: $primary-color; 
-    }
 }
 
 @import 'buttons';
