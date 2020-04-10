@@ -29,6 +29,10 @@ module.exports = {
           filename: 'admin_auth.html',
           template: './src/admin_auth.html'
         }),
+        new HtmlWebpackPlugin({
+          filename: 'admin_car_setting.html',
+          template: './src/admin_car_setting.html'
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
