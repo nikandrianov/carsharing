@@ -33,6 +33,10 @@ module.exports = {
           filename: 'admin_car_setting.html',
           template: './src/admin_car_setting.html'
         }),
+        new HtmlWebpackPlugin({
+          filename: 'admin_entities.html',
+          template: './src/admin_entities.html'
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
