@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Admin Order List</title>
+</head>
+<body>
+    <div class="wrapper_admin">
+        <div class="container-fluid">
+            <div class="container-car-setting">
+                <!-- Start Sidebar -->
+                <div class="sidebar">
+                    <div class="sidebar__inner">
+                        <nav class="sidebar__item">
+                            <header class="sidebar__logo">
+                                <img src="img/logo_admin_auth.svg" alt="logo_admin_car">
+                                <h1>Need fo drive</h1>
+                            </header>
+                            <ul class="sidebar__list">
+                                <li class="sidebar__menu">
+                                    <img src="img/admin/menu1.svg" alt="menu1">Карточка автомобиля
+                                </li>
+                                <li class="sidebar__menu">
+                                    <img src="img/admin/menu2.svg" alt="menu2">Список авто
+                                </li>
+                                <li class="sidebar__menu">
+                                    <img src="img/admin/menu3.svg" alt="menu3">Заказы
+                                </li>
+                                <li class="sidebar__menu">
+                                    <img src="img/admin/menu4.svg" alt="menu4">Menu 4
+                                </li>
+                                <li class="sidebar__menu">
+                                    <img src="img/admin/menu5.svg" alt="menu5">Menu 5
+                                </li>
+                                <li class="sidebar__menu">
+                                    <img src="img/admin/menu6.svg" alt="menu6">Menu 6
+                                </li>
+                                <li class="sidebar__menu">
+                                    <img src="img/admin/menu7.svg" alt="menu7">Menu 7
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- End Sidebar -->
+                <!-- Start Main Content -->
+                <div class="content-admin">
+                    <div class="content-admin__inner">
+                        <div class="content-admin__item">
+                            <!-- Start Header -->
+                            <header class="main_header"> 
+                                <div class="main_header-search">
+                                    <p class="search">
+                                        <img src="img/admin/search.svg" alt="search">
+                                        <input type="text" placeholder="Поиск...">
+                                    </p>
+                                </div>
+                                <div class="main_header-userinfo">
+                                    <div class="userinfo_bell">
+                                        <img src="img/admin/bell.svg" alt="bell" class="bell">
+                                        <span class="count">2</span>
+                                    </div>
+                                    <div class="userinfo_user">
+                                        <img src="img/admin/avatar.png" alt="avatar" class="avatar">
+                                        <p class="user">Admin</p>
+                                        <div class="dropdown">
+                                            <button id="my-dropdown" class="btn dropdown-toggle" data-toggle="dropdown"></button>
+                                            <div class="dropdown-menu" aria-labelledby="my-dropdown">
+                                                <a class="dropdown-item active" href="#">Text</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <!-- End Header -->
+                            <main class="main_car-content">
+                                <div class="car-content__inner">
+                                    <h1>Заказы</h1>
+                                    <div class="content__order-list">
+                                        <div class="order-list__header">
+                                            <div class="input-group order-list-choose">
+                                                <select class="custom-select" id="orderlist-Select01">
+                                                  <option selected>За неделю</option>
+                                                  <option value="1">За месяц</option>
+                                                  <option value="2">За день</option>
+                                                  <option value="3">За год</option>
+                                                </select>
+                                                <select class="custom-select" id="orderlist-Select02">
+                                                    <option selected>Elantra</option>
+                                                    <option value="1">i30 N</option>
+                                                    <option value="2">Creta</option>
+                                                    <option value="3">Solaris</option>
+                                                </select>
+                                                <select class="custom-select" id="orderlist-Select03">
+                                                    <option selected>Ульяновск</option>
+                                                    <option value="1">Самара</option>
+                                                    <option value="2">Москва</option>
+                                                    <option value="3">Казань</option>
+                                                </select>
+                                                <select class="custom-select" id="orderlist-Select04">
+                                                    <option selected>В процессе</option>
+                                                    <option value="1">Выдана</option>
+                                                    <option value="2">В гараже</option>
+                                                    <option value="3">В ремонте</option>
+                                                </select>
+                                            </div>
+                                            <div class="order-list_btn-control">
+                                                <button class="btn btn-primary order-list-apply">Применить</button>
+                                            </div>
+                                        </div>
+                                        <div class="order-list__content">
+                                            <div class="order-content_img">
+                                                <img src="img/cars/i30n.png" alt="i30n">
+                                            </div>
+                                            <div class="order-content_info">
+                                                <p class="content_info-title"><span class="text-uppercase font-weight-bold">elantra </span>в <span class="font-weight-bold">Ульяновск</span>, Нариманова 42</p>
+                                                <p class="content_info-date">12.06.2019 12:00 — 13.06.2019 12:00</p>
+                                                <p class="content_info-color">Цвет: <span class="font-weight-bold">Голубой</span></p>
+                                            </div>
+                                            <div class="order-content_checkbox">
+                                                <div class="order-list-item">
+                                                    <label for="petrol"><input type="checkbox" name="petrol" id="petrol">Полный бак</label>
+                                                </div>
+                                                <div class="order-list-item">
+                                                    <label for="child-armchair"><input type="checkbox" name="child-armchair" id="child-armchair">Детское кресло</label>
+                                                </div>
+                                                <div class="order-list-item">
+                                                    <label for="right-steering-wheel"><input type="checkbox" name="right-steering-wheel" id="right-steering-wheel">Правый руль</label>
+                                                </div>
+                                            </div>
+                                            <div class="order-content_rent">
+                                                <p class="font-weight-bold">4300 ₽</p>
+                                            </div>
+                                            <div class="order-content_btn-control">
+                                                <button class="btn-control_order-list btn-control_check"><img src="img/admin/order-list/check.svg" alt="check">Готово</button><button class="btn-control_order-list btn-control_reject"><img src="img/admin/order-list/reject.svg" alt="reject">Отмена</button><button class="btn-control_order-list btn-control_edit"><img src="img/admin/order-list/edit.svg" alt="edit">Изменить</button>
+                                            </div>
+                                        </div>
+                                        <nav class="order-list_pagination">
+                                            <ul class="pagination justify-content-center">
+                                              <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Previous">
+                                                  <span aria-hidden="true">&laquo;</span>
+                                                  <span class="sr-only">Previous</span>
+                                                </a>
+                                              </li>
+                                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                              <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                              <li class="page-item">
+                                                <a class="page-link" href="#" aria-label="Next">
+                                                  <span aria-hidden="true">&raquo;</span>
+                                                  <span class="sr-only">Next</span>
+                                                </a>
+                                              </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </main>
+                            <!-- End Main Content -->
+                            <!-- Start Footer -->
+                            <footer class="main_footer navber-fixed-bottom">
+                                <div class="footer-ul">
+                                    <li><a href="#">Главная страница</a></li>
+                                    <li><a href="#">Ссылка</a></li>
+                                </div>
+                                <div class="footer-simbirsoft">
+                                    <p>Copyright © 2020 Simbirsoft</p>
+                                </div>
+                            </footer>
+                            <!-- End Footer -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

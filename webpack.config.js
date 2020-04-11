@@ -37,6 +37,10 @@ module.exports = {
           filename: 'admin_entities.html',
           template: './src/admin_entities.html'
         }),
+        new HtmlWebpackPlugin({
+          filename: 'admin_order_list.html',
+          template: './src/admin_order_list.html'
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
