@@ -41,6 +41,10 @@ module.exports = {
           filename: 'admin_order_list.html',
           template: './src/admin_order_list.html'
         }),
+        new HtmlWebpackPlugin({
+          filename: 'admin_error.html',
+          template: './src/admin_error.html'
+        }),
         new MiniCssExtractPlugin({
             filename: '[name].css',
         }),
