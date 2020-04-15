@@ -1,0 +1,140 @@
+.content_entities {
+    background: $white;
+    box-shadow: 0px 3.5px 35px rgba(90, 97, 105, 0.1), 0px 5px 5px rgba(90, 97, 105, 0.06), 0px 2px 4px rgba(90, 97, 105, 0.12), 0px 1px 0px rgba(90, 97, 105, 0.11);
+    border-radius: 9px;
+    max-width: 1062px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.entities_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.entities-choose {
+    padding: 15px 21.5px;
+}
+
+#inputGroupSelect01 {
+    border: 0.5px solid #BECAD6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.345714px;
+    color: #868E96;
+    height: 29px;
+    width: 110px;
+    flex: none;
+}
+
+#inputGroupSelect02 {
+    border: 0.5px solid #BECAD6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.345714px;
+    color: #868E96;
+    height: 29px;
+    width: 110px;
+    flex: none;
+    margin-left: 15px;
+}
+
+#inputGroupSelect03 {
+    border: 0.5px solid #BECAD6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.345714px;
+    color: #868E96;
+    height: 29px;
+    width: 110px;
+    flex: none;
+    margin-left: 15px;
+}
+
+#inputGroupSelect04 {
+    border: 0.5px solid #BECAD6;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.345714px;
+    color: #868E96;
+    height: 29px;
+    width: 110px;
+    flex: none;
+    margin-left: 15px;
+}
+
+.entities_btn-control {
+    display: flex;
+}
+
+.entities-reset {
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: -0.345714px;
+    color: $white;
+    width: 95px;
+    height: 29px;
+}
+
+.entities-apply {
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: -0.345714px;
+    color: $white;
+    width: 95px;
+    height: 29px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.entities_table {
+    padding: 0 21.5px;
+}
+
+.entities_thead {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.377143px;
+    color: #3D5170;
+}
+
+.entities_tbody {
+    td:first-child {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -0.377143px;
+        color: #3D5170;
+    }
+    td {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: -0.377143px;
+        color: #818EA3;
+        font-family: Roboto;
+    }
+}
+
+.entities_pagination {
+    padding: 56.5px 0 21.5px 0;
+}
+
+.page-link {
+    border: none;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: -0.471429px;
+    border-radius: 50%;
+}
+

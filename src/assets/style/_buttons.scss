@@ -1,0 +1,87 @@
+// Заполнитель
+%btn {
+    width: 164px;
+    height: 48px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $color-grey-light;
+    border-radius: 4px;
+    margin-top: 32px;
+}
+
+%btn-order {
+    width: 287px;
+    height: 48px;
+    margin-top: 32px;
+    font-size: 18px;
+    color: $white;
+    line-height: 21px;
+    font-weight: 500;
+    background-blend-mode: darken;
+    border-radius: 8px;
+}
+
+// Миксин
+@mixin btn_slide($btn-background) {
+    @extend %btn;
+    background: $btn-background;
+}
+
+@mixin btn_order($btn-background) {
+    @extend %btn-order;
+    background: $btn-background;
+}
+
+// Кнопки
+// index
+.btn__slide1 {
+    @include btn_slide(linear-gradient(90deg, $green-dark 0%, $green 100%));
+}
+.btn__slide2 {
+    @include btn_slide(linear-gradient(90deg, $blue-dark 0%, $sea-wave 100%));
+}
+.btn__slide3 {
+    @include btn_slide(linear-gradient(90deg, $brown 0%, $rose 100%));
+}
+.btn__slide4 {
+    @include btn_slide(linear-gradient(90deg, $purple-dark 0%, $purple 100%));
+}
+
+.btn:hover {
+    color: $color-grey-light;
+}
+
+.btn:disabled {
+    background: $color-grey-light;
+}
+
+// order
+.btn-model {
+    @include btn_order(linear-gradient(90deg, $green-light-order 2.61%, $sea-wave-light-order 112.6%));
+}
+
+.btn-dop {
+    @include btn_order(linear-gradient(90deg, $green-light-order 2.61%, $sea-wave-light-order 112.6%));
+    display: none;
+}
+
+.btn-itog {
+    @include btn_order(linear-gradient(90deg, $green-light-order 2.61%, $sea-wave-light-order 112.6%));
+    display: none;
+}
+
+.btn-total {
+    @include btn_order(linear-gradient(90deg, $green-light-order 2.61%, $sea-wave-light-order 112.6%));
+    display: none;
+}
+
+.btn-cancel {
+    @include btn_order(linear-gradient(90deg, $brown 0%, $rose 100%));
+    display: none;
+}
