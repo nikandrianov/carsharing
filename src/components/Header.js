@@ -1,6 +1,7 @@
 import React from 'react';
 
 import group from '../assets/image/Group.svg';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
     render() {
@@ -13,7 +14,7 @@ class Header extends React.Component {
                         </div>
                     </div>
                     <div className="header__inner">
-                        <a href="index.html" className="header__logo">Need for drive</a>
+                        <Link to="/" className="header__logo">Need for drive</Link>
                         <div className="header__geolocation">
                             <img src={ group } alt="map" />
                             <p>Ульяновск</p>

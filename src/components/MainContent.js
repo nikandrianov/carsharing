@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class MainContent extends React.Component {
     render() {
@@ -9,7 +10,7 @@ class MainContent extends React.Component {
                     <h2>Need for drive</h2>
                     <p>Поминутная аренда авто твоего города</p>
                 </div>
-                <a href="order.html"><button className="main__button">Забронировать</button></a>
+                    <Link to="/order"><button className="main__button">Забронировать</button></Link>
             </main>
         )
     }
