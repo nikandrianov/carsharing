@@ -4,6 +4,9 @@ import map from '../../assets/image/map.png';
 import x from '../../assets/image/x.svg';
 
 class MapLocation extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div className="content__location">
@@ -11,13 +14,13 @@ class MapLocation extends React.Component {
                     <form className="form">
                         <div className="form__city">
                             <label>Город</label>
-                            <input type="text" id="city" name="city" className="form-input" placeholder="Начните вводить пункт выдачи" />
-                            <img src={ x } alt="x" name="city" id="clear-x" />
+                            <input type="text" id="city" name="city" className="form-input" placeholder="Начните вводить пункт выдачи" value={this.props.city} onChange={this.props.cityChange}/>
+                            <img src={ x } alt="x" name="city" id="clear-x" onClick={this.props.delCity}/>
                         </div>
                         <div className="form__output">
                             <label>Пункт выдачи</label>
-                            <input type="text" id="output" name="output" className="form-input" placeholder="Начните вводить пункт выдачи" />
-                            <img src={ x } alt="x" name="output" id="clear-x2" />
+                            <input type="text" id="output" name="output" className="form-input" placeholder="Начните вводить пункт выдачи" value={this.props.street} onChange={this.props.streetChange}/>
+                            <img src={ x } alt="x" name="output" id="clear-x2" onClick={this.props.delStreet}/>
                         </div>
                     </form>
                     <div className="map-location">

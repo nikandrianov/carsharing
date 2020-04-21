@@ -1,6 +1,9 @@
 import React from 'react';
 
 class OrderZone extends React.Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div className="content__order">
@@ -10,8 +13,8 @@ class OrderZone extends React.Component {
                         <p>Пункт выдачи</p>
                         <p>......................</p>
                         <div className="order__item-location">
-                            <p className="location-text-city"></p>
-                            <p className="location-text-street"></p>
+                            <p className="location-text-city">{this.props.city}</p>
+                            <p className="location-text-street">{this.props.street}</p>
                         </div>
                     </div>
                     <div className="order__item order-model">

@@ -6,6 +6,37 @@ import i30 from '../../assets/image/cars/i30n.png';
 import sonata from '../../assets/image/cars/sonata.png';
 
 class Models extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            cars: [
+                {
+                    id: 1,
+                    name: "elantra",
+                    price: "12 000 - 25 000 ₽",
+                    src: elantra
+                },
+                {
+                    id: 2,
+                    name: "creta",
+                    price: "10 000 - 32 000 ₽",
+                    src: creta
+                },
+                {
+                    id: 3,
+                    name: "i30 N",
+                    price: "12 000 - 25 000 ₽",
+                    src: i30
+                },
+                {
+                    id: 4,
+                    name: "sonata",
+                    price: "10 000 - 32 000 ₽",
+                    src: sonata
+                }
+            ]
+        }
+    }
     render() {
         return (
             <div className="model__inner">
@@ -16,7 +47,17 @@ class Models extends React.Component {
                         <li className="control-li-premium"><span className="control-span-premium"></span>Премиум</li>
                     </ul>
                     <div className="model-list">
-                        <div className="card model-1">
+                        {Object.keys(this.state.cars).map((keyName) => (
+                            <div className="card">
+                                <div className="card-body" key={keyName}>
+                                    <h5 className="card-title text-uppercase">{this.state.cars[keyName].name}</h5>
+                                    <h6 className="card-subtitle">{this.state.cars[keyName].price}</h6>
+                                    <img className="card-img-bottom" src={ this.state.cars[keyName].src } alt={this.state.cars[keyName].name} />
+                                </div>
+                            </div>
+                            ) 
+                        )}
+                        {/* <div className="card model-1">
                             <div className="card-body">
                                 <h5 className="card-title text-uppercase elantra">Elantra</h5>
                                 <h6 className="card-subtitle">12 000 - 25 000 ₽</h6>
@@ -43,7 +84,7 @@ class Models extends React.Component {
                                 <h6 className="card-subtitle">10 000 - 32 000 ₽</h6>
                                 <img className="card-img-bottom" src={ sonata } alt="sonata" />
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
