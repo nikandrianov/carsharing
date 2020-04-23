@@ -7,9 +7,10 @@ class MapLocation extends React.Component {
     constructor(props) {
         super(props);
     }
+
     render() {
         return (
-            <div className="content__location">
+            <div className="content__location" ref={this.props.contentLocation}>
                 <div className="location__inner">
                     <form className="form">
                         <div className="form__city">

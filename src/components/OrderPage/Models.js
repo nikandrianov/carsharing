@@ -39,7 +39,7 @@ class Models extends React.Component {
     }
     render() {
         return (
-            <div className="model__inner">
+            <div className="model__inner" ref={this.props.modelInner}>
                 <div className="model-item">
                     <ul className="model-control">
                         <li className="control-li-model"><span className="control-span-model span__active"></span>Модели</li>
@@ -49,7 +49,7 @@ class Models extends React.Component {
                     <div className="model-list">
                         {Object.keys(this.state.cars).map((keyName) => (
                             <div className="card">
-                                <div className="card-body" key={keyName}>
+                                <div className="card-body" key={keyName.id}>
                                     <h5 className="card-title text-uppercase">{this.state.cars[keyName].name}</h5>
                                     <h6 className="card-subtitle">{this.state.cars[keyName].price}</h6>
                                     <img className="card-img-bottom" src={ this.state.cars[keyName].src } alt={this.state.cars[keyName].name} />

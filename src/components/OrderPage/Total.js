@@ -5,7 +5,7 @@ import i30 from '../../assets/image/cars/i30n.png';
 class Total extends React.Component {
     render() {
         return (
-            <div className="total__inner">
+            <div className="total__inner" ref={this.props.totalInner}>
                 <div className="total-item">
                     <div className="item-content">
                         <div className="content-text">
