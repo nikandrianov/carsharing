@@ -11,19 +11,22 @@ class NavOrder extends React.Component {
                     id: 1,
                     title: "Местоположение",
                     role: "nav-item__active",
-                    refname: this.props.itemMap
+                    refname: this.props.itemMap,
+                    try: this.props.aClickMap
                 },
                 {
                     id: 2,
                     title: "Модель",
                     role: "disabled",
-                    refname: this.props.itemModel
+                    refname: this.props.itemModel,
+                    try: this.props.aClickModel
                 },
                 {
                     id: 3,
                     title: "Дополнительно",
                     role: "disabled",
-                    refname: this.props.itemDop
+                    refname: this.props.itemDop,
+                    try: this.props.aClickDop
                 },
             ]
         }
@@ -31,9 +34,9 @@ class NavOrder extends React.Component {
     render() {
         return (
             <div>
-                <nav className="nav">
+                <nav className="nav" ref={this.props.nav}>
                     {Object.keys(this.state.links).map((item) => (
-                        <li key={item} className={`nav-item ${this.state.links[item].role}`} ref={this.state.links[item].refname}>
+                        <li key={item} className={`nav-item ${this.state.links[item].role}`} ref={this.state.links[item].refname} onClick={this.state.links[item].try}>
                             {this.state.links[item].title}
                             <img src={ vector } alt="Vector_order_page" />
                         </li>
@@ -51,7 +54,7 @@ class NavOrder extends React.Component {
                         Итого
                     </li>
                 </nav>
-                <nav className="nav order-end">
+                <nav className="nav order-end" ref={this.props.orderEnd}>
                     <p>Заказ номер RU58491823</p>
                 </nav>
             </div>

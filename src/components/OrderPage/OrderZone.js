@@ -55,7 +55,7 @@ class OrderZone extends React.Component {
                     <button className="btn btn-model" ref={this.props.btnModel} onClick={this.props.btnClickModel}>Выбрать модель</button>
                     <button className="btn btn-dop" ref={this.props.btnDop} onClick={this.props.btnClickDop}>Дополнительно</button>
                     <button className="btn btn-itog" ref={this.props.btnItog} onClick={this.props.btnClickItog}>Итого</button>
-                    <button className="btn btn-total" ref={this.props.btnTotal}>Заказать</button>
+                    <button className="btn btn-total" ref={this.props.btnTotal} onClick={this.props.btnClickTotal}>Заказать</button>
                     <button className="btn btn-cancel" ref={this.props.btnCancel}>Отменить</button>
                 </div>
             </div>

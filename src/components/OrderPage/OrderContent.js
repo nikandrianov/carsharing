@@ -12,11 +12,17 @@ let contentLocation = React.createRef();
 let modelInner = React.createRef();
 let dopInner = React.createRef();
 let totalInner = React.createRef();
+let modalWindow = React.createRef();
+let nav = React.createRef();
+let orderEnd = React.createRef();
 let btnModel = React.createRef();
 let btnDop = React.createRef();
 let btnItog = React.createRef();
 let btnTotal = React.createRef();
+let textOrder = React.createRef();
 let btnCancel = React.createRef();
+let btnAccept = React.createRef();
+let btnReturn = React.createRef();
 let itemModel = React.createRef();
 let itemDop = React.createRef();
 let itemMap = React.createRef();
@@ -28,8 +34,6 @@ class OrderContent extends React.Component {
         this.state = {
             city: "",
             street: "",
-            // display: true,
-            active: ""
         }
 
         this.cityChange = this.cityChange.bind(this);
@@ -39,6 +43,12 @@ class OrderContent extends React.Component {
         this.btnClickModel = this.btnClickModel.bind(this);
         this.btnClickDop = this.btnClickDop.bind(this);
         this.btnClickItog = this.btnClickItog.bind(this);
+        this.btnClickTotal = this.btnClickTotal.bind(this);
+        this.btnClickAccept = this.btnClickAccept.bind(this);
+        this.btnClickReturn = this.btnClickReturn.bind(this);
+        this.aClickMap = this.aClickMap.bind(this);
+        this.aClickModel = this.aClickModel.bind(this);
+        this.aClickDop = this.aClickDop.bind(this);
     }
 
     cityClick () {
@@ -54,12 +64,14 @@ class OrderContent extends React.Component {
     }
 
     cityChange (e) {
+        e.preventDefault();
         this.setState ({
             city: e.target.value
         })
     }
 
     streetChange (e) {
+        e.preventDefault();
         this.setState ({
             street: e.target.value
         })
@@ -105,6 +117,62 @@ class OrderContent extends React.Component {
         btnTotal.current.style.display = 'block';
     }
 
+    btnClickTotal () {
+        modalWindow.current.style.display = 'flex';
+    }
+
+    btnClickAccept () {
+        modalWindow.current.style.display = 'none';
+        btnTotal.current.style.display = 'none';
+        btnCancel.current.style.display = 'block';
+        nav.current.style.display = 'none';
+        textOrder.current.style.display = 'block';
+        orderEnd.current.style.display = 'block';
+    }
+
+    btnClickReturn () {
+        modalWindow.current.style.display = 'none';
+    }
+
+    aClickMap () {
+        itemMap.current.classList.remove('nav-item__continue');
+        itemModel.current.classList.remove('nav-item__active');
+        itemModel.current.classList.add('disabled');
+        itemDop.current.classList.add('disabled');
+        itemItog.current.classList.add('disabled');
+        itemMap.current.classList.add('nav-item__active');
+        contentLocation.current.style.display = 'block';
+        modelInner.current.style.display = 'none';
+        btnModel.current.style.display = 'block';
+        btnDop.current.style.display = 'none';
+    }
+
+    aClickModel () {
+        itemModel.current.classList.remove('nav-item__continue');
+        itemDop.current.classList.remove('nav-item__active');
+        itemModel.current.classList.add('nav-item__active');
+        itemItog.current.classList.add('disabled');
+        itemDop.current.classList.add('disabled');
+        itemMap.current.classList.remove('disabled');
+        modelInner.current.style.display = 'block';
+        dopInner.current.style.display = 'none';
+        btnDop.current.style.display = 'block';
+        btnItog.current.style.display = 'none';
+    }
+
+    aClickDop () {
+        itemDop.current.classList.remove('nav-item__continue');
+        itemItog.current.classList.remove('nav-item__active');
+        itemDop.current.classList.add('nav-item__active');
+        itemModel.current.classList.remove('disabled');
+        itemItog.current.classList.add('disabled');
+        itemMap.current.classList.add('disabled');
+        dopInner.current.style.display = 'block';
+        totalInner.current.style.display = 'none';
+        btnItog.current.style.display = 'block';
+        btnTotal.current.style.display = 'none';
+    }
+
     render() {
         return (
             <main className="main">
@@ -114,6 +182,11 @@ class OrderContent extends React.Component {
                         itemModel={itemModel}
                         itemDop={itemDop}
                         itemItog={itemItog}
+                        nav={nav}
+                        orderEnd={orderEnd}
+                        aClickMap={this.aClickMap}
+                        aClickModel={this.aClickModel}
+                        aClickDop={this.aClickDop}
                     />
                     <div className="order__content">
                         <MapLocation 
@@ -134,14 +207,22 @@ class OrderContent extends React.Component {
                         />
                         <Total 
                             totalInner={totalInner}
+                            textOrder={textOrder}
                         />
-                        <ModalWindow />
+                        <ModalWindow 
+                            modalWindow={modalWindow}
+                            btnAccept={btnAccept}
+                            btnReturn={btnReturn}
+                            btnClickAccept={this.btnClickAccept}
+                            btnClickReturn={this.btnClickReturn}
+                        />
                         <OrderZone 
                             city={this.state.city}
                             street={this.state.street}
                             btnClickModel={this.btnClickModel}
                             btnClickDop={this.btnClickDop}
                             btnClickItog={this.btnClickItog}
+                            btnClickTotal={this.btnClickTotal}
                             btnModel={btnModel}
                             btnDop={btnDop}
                             btnItog={btnItog}
