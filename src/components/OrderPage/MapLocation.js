@@ -6,6 +6,7 @@ import x from '../../assets/image/x.svg';
 class MapLocation extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {}
     }
 
     render() {

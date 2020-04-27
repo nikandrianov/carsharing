@@ -5,6 +5,7 @@ import i30 from '../../assets/image/cars/i30n.png';
 class Total extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {}
     }
     render() {
         return (

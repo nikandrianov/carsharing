@@ -3,6 +3,9 @@ import React from 'react';
 class OrderZone extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+
+        }
     }
     render() {
         return (
@@ -17,39 +20,39 @@ class OrderZone extends React.Component {
                             <p className="location-text-street">{this.props.street}</p>
                         </div>
                     </div>
-                    <div className="order__item order-model">
+                    <div className="order__item order-model" ref={this.props.textCar}>
                         <p>Модель</p>
                         <p>.....................................</p>
-                        <p className="model-text text-car"></p>
+                        <p className="model-text text-car text-uppercase">{this.props.model}</p>
                     </div>
-                    <div className="order__item order-color">
+                    <div className="order__item order-color" ref={this.props.textColor}>
                         <p>Цвет</p>
-                        <p>.....................................................</p>
-                        <p className="model-text text-color"></p>
+                        <p>..............................................</p>
+                        <p className="model-text text-color">{this.props.color}</p>
                     </div>
                     <div className="order__item order-rent">
                         <p>Длительность аренды</p>
-                        <p className="model-text">1 д 2 ч</p>
+                        <p className="model-text"></p>
                     </div>
-                    <div className="order__item order-tarif">
+                    <div className="order__item order-tarif" ref={this.props.textTarif}>
                         <p>Тариф</p>
                         <p>.....................</p>
-                        <p className="model-text text-tarif">На сутки</p>
+                        <p className="model-text text-tarif">{this.props.tarifs}</p>
                     </div>
-                    <div className="order__item order-petrol">
+                    <div className="order__item order-petrol" ref={this.props.textPetrol}>
                         <p>Полный бак</p>
                         <p>......................................</p>
-                        <p className="model-text text-petrol"></p>
+                        <p className="model-text text-petrol">{this.props.petrol}</p>
                     </div>
-                    <div className="order__item order-child">
+                    <div className="order__item order-child" ref={this.props.textChild}>
                         <p>Детское кресло</p>
                         <p>.....................................</p>
-                        <p className="model-text text-child"></p>
+                        <p className="model-text text-child">{this.props.child}</p>
                     </div>
-                    <div className="order__item order-right">
+                    <div className="order__item order-right" ref={this.props.textRight}>
                         <p>Правый руль</p>
                         <p>......................................</p>
-                        <p className="model-text text-right"></p>
+                        <p className="model-text text-right">{this.props.wheel}</p>
                     </div>
                     <p className="price">Цена: от 8000 до 12000 ₽</p>
                     <button className="btn btn-model" ref={this.props.btnModel} onClick={this.props.btnClickModel}>Выбрать модель</button>

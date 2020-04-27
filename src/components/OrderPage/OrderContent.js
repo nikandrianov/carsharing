@@ -3,10 +3,15 @@ import React from 'react';
 import NavOrder from './NavOrder';
 import MapLocation from './MapLocation';
 import Models from './Models';
-import Additiontal from './Additiontal';
+import Additiontal from './Additional';
 import Total from './Total';
 import ModalWindow from './ModalWindow';
 import OrderZone from './OrderZone';
+
+import elantra from '../../assets/image/cars/elantra.png';
+import creta from '../../assets/image/cars/creta.png';
+import i30 from '../../assets/image/cars/i30n.png';
+import sonata from '../../assets/image/cars/sonata.png';
 
 let contentLocation = React.createRef();
 let modelInner = React.createRef();
@@ -27,6 +32,12 @@ let itemModel = React.createRef();
 let itemDop = React.createRef();
 let itemMap = React.createRef();
 let itemItog = React.createRef();
+let textCar = React.createRef();
+let textColor = React.createRef();
+let textTarif = React.createRef();
+let textPetrol = React.createRef();
+let textChild = React.createRef();
+let textRight = React.createRef();
 
 class OrderContent extends React.Component {
     constructor(props) {
@@ -34,6 +45,96 @@ class OrderContent extends React.Component {
         this.state = {
             city: "",
             street: "",
+            model: "",
+            color: "Любой",
+            tarifs: "",
+            petrol: "",
+            child: "",
+            wheel: "",
+            checkbox: true,
+            cars: [
+                {
+                    id: 1,
+                    name: "elantra",
+                    price: "12 000 - 25 000 ₽",
+                    filterprice: 25000,
+                    src: elantra
+                },
+                {
+                    id: 2,
+                    name: "creta",
+                    price: "10 000 - 32 000 ₽",
+                    filterprice: 32000,
+                    src: creta
+                },
+                {
+                    id: 3,
+                    name: "i30 N",
+                    price: "12 000 - 25 000 ₽",
+                    filterprice: 25000,
+                    src: i30
+                },
+                {
+                    id: 4,
+                    name: "sonata",
+                    price: "10 000 - 32 000 ₽",
+                    filterprice: 32000,
+                    src: sonata
+                }
+            ],
+            filter: [
+                {
+                    title: "Все модели",
+                    name: "model",
+                    active: "span__active"
+                },
+                {
+                    title: "Эконом",
+                    name: "eko",
+                    active: ""
+                },
+                {
+                    title: "Премиум",
+                    name: "premium",
+                    active: ""
+                }
+            ],
+            colors: [
+                {
+                    title: "Любой",
+                    color: "random",
+                    active: "span__active"
+                },
+                {
+                    title: "Красный",
+                    color: "red",
+                    active: ""
+                },
+                {
+                    title: "Голубой",
+                    color: "blue",
+                    active: ""
+                }
+            ],
+            tarif: [
+                {
+                    title: "Поминутно, 7₽/мин"
+                },
+                {
+                    title: "На сутки, 1999 ₽/сутки"
+                }
+            ],
+            services: [
+                {
+                    title: "Полный бак, 500р"
+                },
+                {
+                    title: "Детское кресло, 200р"
+                },
+                {
+                    title: "Правый руль, 1600р"
+                },
+            ]
         }
 
         this.cityChange = this.cityChange.bind(this);
@@ -49,6 +150,10 @@ class OrderContent extends React.Component {
         this.aClickMap = this.aClickMap.bind(this);
         this.aClickModel = this.aClickModel.bind(this);
         this.aClickDop = this.aClickDop.bind(this);
+        this.addCar = this.addCar.bind(this);
+        this.addColor = this.addColor.bind(this);
+        this.addTarif = this.addTarif.bind(this);
+        this.addCheckbox = this.addCheckbox.bind(this);
     }
 
     cityClick () {
@@ -99,6 +204,7 @@ class OrderContent extends React.Component {
         itemDop.current.classList.remove('disabled');
         btnDop.current.style.display = 'none';
         btnItog.current.style.display = 'block';
+        textColor.current.style.display = 'flex';
     }
 
     btnClickItog () {
@@ -173,6 +279,54 @@ class OrderContent extends React.Component {
         btnTotal.current.style.display = 'none';
     }
 
+    addCar (name) {
+        textCar.current.style.display = 'flex';
+        this.setState({ model: name});
+    }
+
+    addColor (color) {
+        this.setState({ color: color});
+    }
+
+    addTarif (e) {
+        textTarif.current.style.display = 'flex';
+        this.setState({ tarifs: e});
+    }
+
+    addCheckbox (e) {
+        console.log(this.state.checkbox);
+        if ( e === "Полный бак, 500р") {
+            textPetrol.current.style.display = 'flex';
+            if ( this.state.checkbox ) {
+                this.setState({ petrol: "Да", checkbox: !this.state.checkbox});
+            }
+            else {
+                textPetrol.current.style.display = 'none';
+                this.setState({ petrol: "", checkbox: !this.state.checkbox});
+            }
+        }
+        else if (e === "Детское кресло, 200р") {
+            textChild.current.style.display = 'flex';
+            if ( this.state.checkbox ) {
+                this.setState({ child: "Да", checkbox: !this.state.checkbox});
+            }
+            else {
+                textChild.current.style.display = 'none';
+                this.setState({ child: "", checkbox: !this.state.checkbox});
+            }
+        }
+        else if (e === "Правый руль, 1600р") {
+            textRight.current.style.display = 'flex';
+            if ( this.state.checkbox ) {
+                this.setState({ wheel: "Да", checkbox: !this.state.checkbox});
+            }
+            else {
+                textRight.current.style.display = 'none';
+                this.setState({ wheel: "", checkbox: !this.state.checkbox});
+            }
+        }
+    }
+
     render() {
         return (
             <main className="main">
@@ -199,11 +353,20 @@ class OrderContent extends React.Component {
                             btnChangeModel={this.state.display}
                             contentLocation={contentLocation}
                         />
-                        <Models 
+                        <Models
+                            cars={this.state.cars}
+                            filter={this.state.filter}
                             modelInner={modelInner}
+                            addCar={this.addCar}
                         />
                         <Additiontal 
+                            colors={this.state.colors}
+                            tarif={this.state.tarif}
+                            services={this.state.services}
                             dopInner={dopInner}
+                            addColor={this.addColor}
+                            addTarif={this.addTarif}
+                            addCheckbox={this.addCheckbox}
                         />
                         <Total 
                             totalInner={totalInner}
@@ -219,6 +382,12 @@ class OrderContent extends React.Component {
                         <OrderZone 
                             city={this.state.city}
                             street={this.state.street}
+                            model={this.state.model}
+                            color={this.state.color}
+                            tarifs={this.state.tarifs}
+                            petrol={this.state.petrol}
+                            child={this.state.child}
+                            wheel={this.state.wheel}
                             btnClickModel={this.btnClickModel}
                             btnClickDop={this.btnClickDop}
                             btnClickItog={this.btnClickItog}
@@ -228,6 +397,12 @@ class OrderContent extends React.Component {
                             btnItog={btnItog}
                             btnTotal={btnTotal}
                             btnCancel={btnCancel}
+                            textCar={textCar}
+                            textColor={textColor}
+                            textTarif={textTarif}
+                            textPetrol={textPetrol}
+                            textChild={textChild}
+                            textRight={textRight}
                         />
                     </div>
                 </div>

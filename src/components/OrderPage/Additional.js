@@ -5,22 +5,7 @@ import x from '../../assets/image/x.svg';
 class Additiontal extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            colors: [
-                {
-                    title: "Любой",
-                    func: "random"
-                },
-                {
-                    title: "Красный",
-                    func: "red"
-                },
-                {
-                    title: "Голубой",
-                    func: "blue"
-                }
-            ]
-        }
+        this.state = {}
     }
     render() {
         return (
@@ -29,8 +14,8 @@ class Additiontal extends React.Component {
                     <h4 className="title">Цвет</h4>
                     <div className="options-colors">
                         <ul className="colors-item">
-                            {Object.keys(this.state.colors).map((item) => (
-                                <li className={`colors-li-${this.state.colors[item].func}`} key={item}><span className={`colors-span-${this.state.colors[item].func}`}></span>{this.state.colors[item].title}</li>
+                            {Object.keys(this.props.colors).map((item) => (
+                                <li className={`colors-li-${this.props.colors[item].color}`} key={item} onClick={this.props.addColor.bind(this, this.props.colors[item].title)}><span className={`colors-span-${this.props.colors[item].color} ${this.props.colors[item].active}`}></span>{this.props.colors[item].title}</li>
                                 )
                             )}
                             {/* <li className="colors-li-random"><span className="colors-span-random"></span>Любой</li>
@@ -42,33 +27,38 @@ class Additiontal extends React.Component {
                     <form className="form-rent">
                         <div className="form-rent__date">
                             <label>C</label>
-                            <input className="rent-input" type="text" name="start-rent" placeholder="Введите дату и время" />
-                            <img src={ x } alt="x" name="start-rent" />
+                            <input className="rent-input" type="datetime-local" name="start-rent" placeholder="Введите дату и время" />
+                            <img src={ x } alt="x"/>
                         </div>
                         <div className="form-rent__date">
                             <label>По</label>
-                            <input className="rent-input" type="text" name="end-rent" placeholder="Введите дату и время" />
-                            <img src={ x } alt="x" name="end-rent" />
+                            <input className="rent-input" type="datetime-local" name="end-rent" placeholder="Введите дату и время" />
+                            <img src={ x } alt="x"/>
                         </div>
                     </form>
                     <h4 className="title">Тариф</h4>
                     <div className="tarif">
                         <ul className="tarif-item">
-                            <li className="tarif-li-minut"><span className="tarif-span-minut"></span>Поминутно, 7₽/мин</li>
-                            <li className="tarif-li-days"><span className="tarif-span-days"></span>На сутки, 1999 ₽/сутки</li>
+                            {this.props.tarif.map( (item, index) => <li key={index} onClick={this.props.addTarif.bind(this, item.title)}><span></span>{item.title}</li>)}
+                            {/* <li><span></span>На сутки, 1999 ₽/сутки</li> */}
                         </ul>
                     </div>
                     <h4 className="title">Доп услуги</h4>
                     <div className="services">
-                        <div className="services-item">
-                            <label><input type="checkbox" name="petrol" id="petrol" />Полный бак, 500р</label>
+                        {Object.keys(this.props.services).map ( (item, index) => (
+                            <div className="services-item" key={index}>
+                                <label onChange={this.props.addCheckbox.bind(this, this.props.services[item].title)}><input type="checkbox" />{this.props.services[item].title}</label>
+                            </div>
+                        ))}
+                        {/* <div className="services-item">
+                            <label><input type="checkbox" />Полный бак, 500р</label>
                         </div>
                         <div className="services-item">
-                            <label><input type="checkbox" name="child-armchair" id="child-armchair" />Детское кресло, 200р</label>
+                            <label><input type="checkbox" />Детское кресло, 200р</label>
                         </div>
                         <div className="services-item">
-                            <label><input type="checkbox" name="right-steering-wheel" id="right-steering-wheel" />Правый руль, 1600р</label>
-                        </div>
+                            <label><input type="checkbox" />Правый руль, 1600р</label>
+                        </div> */}
                     </div>
                 </div>
             </div>

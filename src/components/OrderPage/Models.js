@@ -1,70 +1,29 @@
 import React from 'react';
 
-import elantra from '../../assets/image/cars/elantra.png';
-import creta from '../../assets/image/cars/creta.png';
-import i30 from '../../assets/image/cars/i30n.png';
-import sonata from '../../assets/image/cars/sonata.png';
+
 
 class Models extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cars: [
-                {
-                    id: 1,
-                    name: "elantra",
-                    price: "12 000 - 25 000 ₽",
-                    pricefilter: 25000,
-                    src: elantra
-                },
-                {
-                    id: 2,
-                    name: "creta",
-                    price: "10 000 - 32 000 ₽",
-                    pricefilter: 32000,
-                    src: creta
-                },
-                {
-                    id: 3,
-                    name: "i30 N",
-                    price: "12 000 - 25 000 ₽",
-                    pricefilter: 25000,
-                    src: i30
-                },
-                {
-                    id: 4,
-                    name: "sonata",
-                    price: "10 000 - 32 000 ₽",
-                    pricefilter: 32000,
-                    src: sonata
-                }
-            ],
-            filter: [
-                {
-                    title: "Модель",
-                    name: "model",
-                    active: ""
-                },
-                {
-                    title: "Эконом",
-                    name: "eko",
-                    active: ""
-                },
-                {
-                    title: "Премиум",
-                    name: "premium",
-                    active: ""
-                }
-            ]
+            cars: props.cars,
+            filter: props.filter,
         }
-
-        this.filterClick = this.filterClick.bind(this);
     }
 
-    filterClick () {
-        this.setState ({
-
-        })
+    filterEko (name) {
+        if ( name === "eko") {
+            const filtercar = this.props.cars.filter( item => item.filterprice < 32000);
+            this.setState({ cars: filtercar});
+        }
+        else if ( name === "model") {
+            this.setState({ cars: this.props.cars, actived: "span__active" });
+        }
+        else if ( name === "premium") {
+            const filtercar = this.props.cars.filter( item => item.filterprice >= 32000);
+            this.setState({ cars: filtercar});
+        }
+        else return this.setState({ cars: this.props.cars });
     }
 
     render() {
@@ -73,7 +32,7 @@ class Models extends React.Component {
                 <div className="model-item">
                     <ul className="model-control">
                         {Object.keys(this.state.filter).map((item) => (
-                            <li className={`colors-li-${this.state.filter[item].name}`} key={item} onClick={this.filterClick}><span className={`colors-span-${this.state.filter[item].name} ${this.state.filter[item].active}`}></span>{this.state.filter[item].title}</li>
+                            <li className={`colors-li-${this.state.filter[item].name}`} key={item} onClick={this.filterEko.bind(this, this.state.filter[item].name)}><span className={`colors-span-${this.state.filter[item].name} ${this.state.filter[item].active}`}></span>{this.state.filter[item].title}</li>
                             )
                         )}
                         {/* <li className="control-li-model"><span className="control-span-model span__active"></span>Модели</li>
@@ -81,9 +40,9 @@ class Models extends React.Component {
                         <li className="control-li-premium"><span className="control-span-premium"></span>Премиум</li> */}
                     </ul>
                     <div className="model-list">
-                        {Object.keys(this.state.cars).map((keyName) => (
-                            <div className="card">
-                                <div className="card-body" key={keyName.id}>
+                        {Object.keys(this.state.cars).map((keyName, index) => (
+                            <div className="card"  key={index}>
+                                <div className="card-body" onClick={this.props.addCar.bind(this, this.state.cars[keyName].name)}>
                                     <h5 className="card-title text-uppercase">{this.state.cars[keyName].name}</h5>
                                     <h6 className="card-subtitle">{this.state.cars[keyName].price}</h6>
                                     <img className="card-img-bottom" src={ this.state.cars[keyName].src } alt={this.state.cars[keyName].name} />
