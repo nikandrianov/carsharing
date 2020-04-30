@@ -8,13 +8,13 @@ class Header extends React.Component {
         return (
             <header>
                 <div className="header__mobile">
-                    <div className="hamburger">
-                        <div className="hamburger__inner">
-                            <span className="hamburger__item"></span>
+                    <div className="header__hamburger">
+                        <div className="header__item">
+                            <span className="item-hamburger"></span>
                         </div>
                     </div>
-                    <div className="header__inner">
-                        <Link to="/" className="header__logo">Need for drive</Link>
+                    <div className="header__logo">
+                        <Link to="/" className="header__title">Need for drive</Link>
                         <div className="header__geolocation">
                             <img src={ group } alt="map" />
                             <p>Ульяновск</p>

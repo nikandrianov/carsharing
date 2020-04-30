@@ -10,7 +10,7 @@ class MainContent extends React.Component {
                     <h2>Need for drive</h2>
                     <p>Поминутная аренда авто твоего города</p>
                 </div>
-                    <Link to="/order"><button className="main__button">Забронировать</button></Link>
+                <Link to="/order"><button className="main__button">Забронировать</button></Link>
             </main>
         )
     }

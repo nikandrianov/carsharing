@@ -11,7 +11,7 @@ class Slider extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            "slide": [
+            slide: [
                 {
                     "id": 1,
                     "title": "Бесплатная парковка",
@@ -42,51 +42,18 @@ class Slider extends React.Component {
 
     render() {
         return (
-            <div className="content__slider d-none d-sm-none d-md-none d-lg-block">
+            <div className="slider d-none d-sm-none d-md-none d-lg-block">
                 <Carousel>
-                    {Object.keys(this.state.slide).map((keyName) => (
-                        <Carousel.Item key={keyName}>
-                            <img src={ this.state.slide[keyName].src } alt={`slide${this.state.slide[keyName].id}`} />
+                    {this.state.slide.map( (item, index) => (
+                        <Carousel.Item key={index}>
+                            <img src={item.src} alt={`slide${item.id}`}/>
                             <Carousel.Caption>
-                                <h3>{this.state.slide[keyName].title}</h3>
-                                <p>{this.state.slide[keyName].text}</p>
-                                <button className={`btn btn__slide${this.state.slide[keyName].id}`}>Подробнее</button>
+                                <h3>{item.title}</h3>
+                                <p>{item.text}</p>
+                                <button className={`btn btn__slide${item.id}`}>Подробнее</button>
                             </Carousel.Caption>
                         </Carousel.Item>
-                        ) 
-                    )}
-                    {/* <Carousel.Item>
-                        <img src={ slide1 } alt="slide1" />
-                        <Carousel.Caption>
-                            <h3>Бесплатная парковка</h3>
-                            <p>Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.</p>
-                            <button className="btn btn__slide1">Подробнее</button>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img src={ slide2 } alt="slide2" />
-                        <Carousel.Caption>
-                            <h3>Страховка</h3>
-                            <p>Полная страховка страховка автомобиля</p>
-                            <button className="btn btn__slide2">Подробнее</button>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img src={ slide3 } alt="slide3" />
-                        <Carousel.Caption>
-                            <h3>Бензин</h3>
-                            <p>Полный бак на любой заправке города за наш счёт</p>
-                            <button className="btn btn__slide3">Подробнее</button>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img src={ slide4 } alt="slide4" />
-                        <Carousel.Caption>
-                            <h3>Обслуживание</h3>
-                            <p>Автомобиль проходит еженедельное ТО</p>
-                            <button className="btn btn__slide4">Подробнее</button>
-                        </Carousel.Caption>
-                    </Carousel.Item> */}
+                    ) )}
                 </Carousel>
             </div>
         )

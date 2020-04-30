@@ -7,7 +7,7 @@ class Menu extends React.Component {
                 <div className="menu__inner">
                     <div className="c-hamburger">
                         <div className="c-hamburger__inner">
-                            <span className="c-hamburger__item"></span>
+                            <span className="item-c-hamburger"></span>
                         </div>
                     </div>
                     <div className="lang">
