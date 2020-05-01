@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "97ca8053517d283464b495f0ae27af14",
+    "revision": "6d0cab5b7bd24da38ee98797adaea1ab",
     "url": "/carsharing/index.html"
   },
   {
-    "revision": "b03534336a5ffb3f01a0",
+    "revision": "d10c9a81e3b63d761e6d",
     "url": "/carsharing/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "c474812813e79d4c0f57",
-    "url": "/carsharing/static/css/main.16e3f998.chunk.css"
+    "revision": "03e427efbe31e0eceda6",
+    "url": "/carsharing/static/css/main.41fd24bc.chunk.css"
   },
   {
-    "revision": "b03534336a5ffb3f01a0",
-    "url": "/carsharing/static/js/2.f7484727.chunk.js"
+    "revision": "d10c9a81e3b63d761e6d",
+    "url": "/carsharing/static/js/2.b77788d8.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/carsharing/static/js/2.f7484727.chunk.js.LICENSE.txt"
+    "url": "/carsharing/static/js/2.b77788d8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c474812813e79d4c0f57",
-    "url": "/carsharing/static/js/main.aa297511.chunk.js"
+    "revision": "03e427efbe31e0eceda6",
+    "url": "/carsharing/static/js/main.538317b2.chunk.js"
   },
   {
     "revision": "05940a14996a5ce35dbd",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7cc0558f6c8e98abbd6d3a31aec109fa",
     "url": "/carsharing/static/media/Group.7cc0558f.svg"
+  },
+  {
+    "revision": "c2d089e9cd111b8ad968f30d62a938de",
+    "url": "/carsharing/static/media/Instagram.c2d089e9.svg"
   },
   {
     "revision": "7f93b98434ed894eaaa7c49e72da4d31",
@@ -42,6 +46,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "0582c8e0ca13c474c9a25fa21bf5fcbb",
     "url": "/carsharing/static/media/elantra.0582c8e0.png"
+  },
+  {
+    "revision": "f16167c861b373a4e6e9c5d07b75cc36",
+    "url": "/carsharing/static/media/facebook.f16167c8.svg"
   },
   {
     "revision": "631059c7ea7f572023d6e61b0c0bebc7",
@@ -70,6 +78,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "61f9ea401835015c6da2e57617073dab",
     "url": "/carsharing/static/media/sonata.61f9ea40.png"
+  },
+  {
+    "revision": "72cf4fdf04acfa335b67a58122afa92b",
+    "url": "/carsharing/static/media/telegram.72cf4fdf.svg"
   },
   {
     "revision": "9f1b3b91cf6744470015a09e2dbea7e4",

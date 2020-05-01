@@ -187,21 +187,21 @@ class OrderContent extends React.Component {
         modelInner.current.style.display = "block";
         btnModel.current.style.display = "none";
         btnDop.current.style.display = "block";
-        itemMap.current.classList.remove('nav-item__active');
+        itemMap.current.classList.remove('item-nav_active');
         itemMap.current.classList.add('nav-item__continue');
-        itemModel.current.classList.add('nav-item__active');
-        itemModel.current.classList.remove('disabled');
+        itemModel.current.classList.add('item-nav_active');
+        itemModel.current.classList.remove('item-nav_disabled');
     }
 
     btnClickDop () {
         modelInner.current.style.display = 'none';
         dopInner.current.style.display = 'block';
-        itemModel.current.classList.remove('nav-item__active');
+        itemModel.current.classList.remove('item-nav_active');
         itemMap.current.classList.add('nav-item__continue');
         itemModel.current.classList.add('nav-item__continue');
-        itemDop.current.classList.add('nav-item__active');
-        itemMap.current.classList.add('disabled');
-        itemDop.current.classList.remove('disabled');
+        itemDop.current.classList.add('item-nav_active');
+        itemMap.current.classList.add('item-nav_disabled');
+        itemDop.current.classList.remove('item-nav_disabled');
         btnDop.current.style.display = 'none';
         btnItog.current.style.display = 'block';
         textColor.current.style.display = 'flex';
@@ -210,15 +210,15 @@ class OrderContent extends React.Component {
     btnClickItog () {
         dopInner.current.style.display = 'none';
         totalInner.current.style.display = 'block';
-        itemDop.current.classList.remove('nav-item__active');
+        itemDop.current.classList.remove('item-nav_active');
         itemMap.current.classList.add('nav-item__continue');
         itemModel.current.classList.add('nav-item__continue');
         itemDop.current.classList.add('nav-item__continue');
-        itemItog.current.classList.add('nav-item__active');
-        itemDop.current.classList.remove('disabled');
-        itemItog.current.classList.remove('disabled');
-        itemMap.current.classList.add('disabled');
-        itemModel.current.classList.add('disabled');
+        itemItog.current.classList.add('item-nav_active');
+        itemDop.current.classList.remove('item-nav_disabled');
+        itemItog.current.classList.remove('item-nav_disabled');
+        itemMap.current.classList.add('item-nav_disabled');
+        itemModel.current.classList.add('item-nav_disabled');
         btnItog.current.style.display = 'none';
         btnTotal.current.style.display = 'block';
     }
@@ -242,11 +242,11 @@ class OrderContent extends React.Component {
 
     aClickMap () {
         itemMap.current.classList.remove('nav-item__continue');
-        itemModel.current.classList.remove('nav-item__active');
-        itemModel.current.classList.add('disabled');
-        itemDop.current.classList.add('disabled');
-        itemItog.current.classList.add('disabled');
-        itemMap.current.classList.add('nav-item__active');
+        itemModel.current.classList.remove('item-nav_active');
+        itemModel.current.classList.add('item-nav_disabled');
+        itemDop.current.classList.add('item-nav_disabled');
+        itemItog.current.classList.add('item-nav_disabled');
+        itemMap.current.classList.add('item-nav_active');
         contentLocation.current.style.display = 'block';
         modelInner.current.style.display = 'none';
         btnModel.current.style.display = 'block';
@@ -255,11 +255,11 @@ class OrderContent extends React.Component {
 
     aClickModel () {
         itemModel.current.classList.remove('nav-item__continue');
-        itemDop.current.classList.remove('nav-item__active');
-        itemModel.current.classList.add('nav-item__active');
-        itemItog.current.classList.add('disabled');
-        itemDop.current.classList.add('disabled');
-        itemMap.current.classList.remove('disabled');
+        itemDop.current.classList.remove('item-nav_active');
+        itemModel.current.classList.add('item-nav_active');
+        itemItog.current.classList.add('item-nav_disabled');
+        itemDop.current.classList.add('item-nav_disabled');
+        itemMap.current.classList.remove('item-nav_disabled');
         modelInner.current.style.display = 'block';
         dopInner.current.style.display = 'none';
         btnDop.current.style.display = 'block';
@@ -268,11 +268,11 @@ class OrderContent extends React.Component {
 
     aClickDop () {
         itemDop.current.classList.remove('nav-item__continue');
-        itemItog.current.classList.remove('nav-item__active');
-        itemDop.current.classList.add('nav-item__active');
-        itemModel.current.classList.remove('disabled');
-        itemItog.current.classList.add('disabled');
-        itemMap.current.classList.add('disabled');
+        itemItog.current.classList.remove('item-nav_active');
+        itemDop.current.classList.add('item-nav_active');
+        itemModel.current.classList.remove('item-nav_disabled');
+        itemItog.current.classList.add('item-nav_disabled');
+        itemMap.current.classList.add('item-nav_disabled');
         dopInner.current.style.display = 'block';
         totalInner.current.style.display = 'none';
         btnItog.current.style.display = 'block';
@@ -342,7 +342,7 @@ class OrderContent extends React.Component {
                         aClickModel={this.aClickModel}
                         aClickDop={this.aClickDop}
                     />
-                    <div className="order__content">
+                    <div className="main__order">
                         <MapLocation 
                             city={this.state.city}
                             street={this.state.street}

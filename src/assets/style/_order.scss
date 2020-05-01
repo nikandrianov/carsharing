@@ -45,7 +45,7 @@
     list-style: none;
 }
 
-.nav-item {
+.item-nav {
     font-size: 14px;
     color: $color-grey-dark;
     line-height: 16px;
@@ -59,11 +59,11 @@
     }
 }
 
-.nav-item__active {
+.item-nav_active {
     color: $primary-color;
 }
 
-.disabled {
+.item-nav_disabled {
     pointer-events: none;
 }
 
@@ -71,7 +71,7 @@
     color: $primary-color-dark;
 }
 
-.order-end {
+.nav__order {
     align-items: center;
     font-weight: bold;
     font-size: 14px;
@@ -83,10 +83,10 @@
     }
 }
         
-.order__content {
+.main__order {
     display: flex;
     justify-content: space-between;
-    .content__location {
+    .location {
         padding: 0 0 0 64px;
     }
 }
@@ -100,10 +100,10 @@
     text-align: right;
 }
                         
-.form__city {
+.item-form__city {
     margin-top: 0;
     position: relative;
-    .form-input {
+    .item-form__input {
         margin-left: 8px;
         padding: 0 15px 3px 8px;
         border-bottom: 1px solid $color-grey-dark;
@@ -121,10 +121,10 @@
     }
 }
                             
-.form__output {
+.item-form__output {
     margin-top: 12px;
     position: relative;
-    .form-input {
+    .item-form__input {
         margin-left: 8px;
         padding: 0 15px 3px 8px;
         border-bottom: 1px solid $color-grey-dark;
@@ -142,14 +142,14 @@
     }
 }
 
-.map-location {
+.map {
     margin-top: 45px;
     h4 {
         font-size: 14px;
         color: $primary-color-dark;
         line-height: 16px;
     }
-    .location {
+    .item-map {
         width: 736px;
         margin-top: 16px;
     }
@@ -205,7 +205,7 @@
     font-weight: 500;
 }    
 
-.content__location {
+.location {
     display: block;
 }
 

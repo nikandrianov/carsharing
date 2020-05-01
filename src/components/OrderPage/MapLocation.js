@@ -10,24 +10,24 @@ class MapLocation extends React.Component {
     }
 
     render() {
-        return (
-            <div className="content__location" ref={this.props.contentLocation}>
+       return (
+            <div className="location" ref={this.props.contentLocation}>
                 <div className="location__inner">
                     <form className="form">
-                        <div className="form__city">
+                        <div className="item-form item-form__city">
                             <label>Город</label>
-                            <input type="text" id="city" name="city" className="form-input" placeholder="Начните вводить пункт выдачи" value={this.props.city} onChange={this.props.cityChange}/>
+                            <input type="text" id="city" name="city" className="item-form__input" placeholder="Начните вводить пункт выдачи" value={this.props.city} onChange={this.props.cityChange}/>
                             <img src={ x } alt="x" name="city" id="clear-x" onClick={this.props.delCity}/>
                         </div>
-                        <div className="form__output">
+                        <div className="item-form item-form__output">
                             <label>Пункт выдачи</label>
-                            <input type="text" id="output" name="output" className="form-input" placeholder="Начните вводить пункт выдачи" value={this.props.street} onChange={this.props.streetChange}/>
+                            <input type="text" id="output" name="output" className="item-form__input" placeholder="Начните вводить пункт выдачи" value={this.props.street} onChange={this.props.streetChange}/>
                             <img src={ x } alt="x" name="output" id="clear-x2" onClick={this.props.delStreet}/>
                         </div>
                     </form>
-                    <div className="map-location">
+                    <div className="map">
                         <h4>Выбрать на карте:</h4>
-                        <div className="location">
+                        <div className="item-map">
                             <img src={ map } alt="map" />
                         </div>
                     </div>

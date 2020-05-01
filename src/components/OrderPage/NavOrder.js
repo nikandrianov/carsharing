@@ -10,21 +10,21 @@ class NavOrder extends React.Component {
                 {
                     id: 1,
                     title: "Местоположение",
-                    role: "nav-item__active",
+                    role: "item-nav_active",
                     refname: this.props.itemMap,
                     try: this.props.aClickMap
                 },
                 {
                     id: 2,
                     title: "Модель",
-                    role: "disabled",
+                    role: "item-nav_disabled",
                     refname: this.props.itemModel,
                     try: this.props.aClickModel
                 },
                 {
                     id: 3,
                     title: "Дополнительно",
-                    role: "disabled",
+                    role: "item-nav_disabled",
                     refname: this.props.itemDop,
                     try: this.props.aClickDop
                 },
@@ -35,26 +35,14 @@ class NavOrder extends React.Component {
         return (
             <div>
                 <nav className="nav" ref={this.props.nav}>
-                    {Object.keys(this.state.links).map((item) => (
-                        <li key={item} className={`nav-item ${this.state.links[item].role}`} ref={this.state.links[item].refname} onClick={this.state.links[item].try}>
-                            {this.state.links[item].title}
-                            <img src={ vector } alt="Vector_order_page" />
-                        </li>
-                        )
-                    )}
-                    {/* <li className="nav-item item-model disabled">
-                        Модель
-                        <img src={ vector} alt="Vector_order_page" />
-                    </li>
-                    <li className="nav-item item-dop disabled">
-                        Дополнительно
-                        <img src={ vector} alt="Vector_order_page" />
-                    </li> */}
-                    <li className="nav-item disabled" ref={this.props.itemItog}>
+                    {this.state.links.map( (item, index) => (
+                        <li key={index} className={`item-nav ${item.role}`} ref={item.refname} onClick={item.try}>{item.title}<img src={ vector } alt="Vector_order_page" /></li>
+                    ))}
+                    <li className="item-nav item-nav_disabled" ref={this.props.itemItog}>
                         Итого
                     </li>
                 </nav>
-                <nav className="nav order-end" ref={this.props.orderEnd}>
+                <nav className="nav nav__order" ref={this.props.orderEnd}>
                     <p>Заказ номер RU58491823</p>
                 </nav>
             </div>
