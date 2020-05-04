@@ -3,11 +3,11 @@ import './App.scss';
 
 import Main from './pages/Main';
 import Order from './pages/Order';
-// import AdminAuth from './pages/AdminAuth';
-// import AdminCarSetting from './pages/AdminCarSetting';
-// import AdminOrderList from './pages/AdminOrderList';
-// import AdminEntities from './pages/AdminEntities';
-// import AdminError from './pages/AdminError';
+import AdminAuth from './pages/AdminAuth';
+import AdminCarSetting from './pages/AdminCarSetting';
+import AdminOrderList from './pages/AdminOrderList';
+import AdminEntities from './pages/AdminEntities';
+import AdminError from './pages/AdminError';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
@@ -18,6 +18,11 @@ class App extends React.Component {
           <Switch>
               <Route exact path="/" component={Main}></Route>
               <Route exact path="/order" component={Order}></Route>
+              <Route exact path="/admin/" component={AdminAuth}></Route>
+              <Route exact path="/admin/setting" component={AdminCarSetting}></Route>
+              <Route exact path="/admin/order" component={AdminOrderList}></Route>
+              <Route exact path="/admin/entities" component={AdminEntities}></Route>
+              <Route exact path="/admin/error" component={AdminError}></Route>
           </Switch>
       </div>
       </Router>

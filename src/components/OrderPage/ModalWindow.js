@@ -7,7 +7,7 @@ class ModalWindow extends React.Component {
     }
     render() {
         return (
-            <div className="modal-window" ref={this.props.modalWindow}>
+            <div className="modal__window" ref={this.props.modalWindow}>
                 <div className="modal__inner">
                     <h1>Подтвердить заказ</h1>
                     <button className="btn button-accept" ref={this.props.btnAccept} onClick={this.props.btnClickAccept}>Подтвердить</button>

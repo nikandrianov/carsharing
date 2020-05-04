@@ -155,13 +155,13 @@
     }
 }
 
-.content__order {
+.order {
     width: 384px;
     padding: 32px 64px 0 32px;
     border-left: 1px solid $color-grey-light;
 }
 
-.order {
+.order__inner {
     h4 {
     font-size: 18px;
     color: $primary-color-dark;
@@ -172,7 +172,7 @@
     }
 }
                     
-.order__item {
+.item-order {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -181,23 +181,23 @@
     line-height: 16px;
 }
                         
-.order__item-location {
+.item-order__location {
     max-width: 150px;
     text-align: right;
     color: $color-grey-dark;
 }
                         
-.model-text {
+.item-order__text {
     max-width: 150px;
     text-align: right;
     color: $color-grey-dark;
 }
 
-.order-model, .order-color, .order-rent, .order-tarif, .order-petrol, .order-child, .order-right {
+.item-order__model, .item-order__color, .item-order__rent, .item-order__tarif, .item-order__petrol, .item-order__child, .item-order__right {
     display: none;
 }
                     
-.price {
+.order__price {
     font-size: 16px;
     color: $primary-color-dark;
     line-height: 16px;
@@ -209,12 +209,12 @@
     display: block;
 }
 
-.model__inner {
+.model {
     padding: 0 0 32px 64px;
     display: none;
 }
 
-.model-control {
+.model__control {
     margin-top: 32px;
     display: flex;
     li {
@@ -244,11 +244,11 @@
     }
 }
             
-.model-control__active {
+.model__control__active {
     color: $primary-color-dark;
 }
 
-.model-list {
+.model__list {
     margin-top: 48px;
     max-width: 736px;
     display: flex;
@@ -290,7 +290,7 @@
     border-color: $primary-color;
 }
 
-.dop__inner {
+.dop {
     padding: 0 0 32px 64px;
     display: none;
 }
@@ -354,7 +354,7 @@
 .form-rent__date {
     position: relative;
     margin-top: 12px;
-    .rent-input {
+    .form-rent__input {
         margin-left: 8px;
         padding: 0 15px 3px 8px;
         border-bottom: 1px solid $color-grey-dark;
@@ -437,19 +437,19 @@
     color: $primary-color-dark;
 }
 
-.total__inner {
+.total {
     padding: 32px 0 32px 64px;
     width: 100%;
     max-width: 736px;
     display: none;
 }
 
-.item-content {
+.total__content {
     display: flex;
     justify-content: space-between;
 }
             
-.content-text-order {
+.content-text__order {
     font-weight: normal;
     font-size: 24px;
     line-height: 28px;
@@ -457,14 +457,14 @@
     display: none;
 }
             
-.content-text-model {
+.content-text__model {
     font-size: 18px;
     color: $primary-color-dark;
     line-height: 21px;
     margin-bottom: 0;
 }
             
-.content-text-number {
+.content-text__number {
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
@@ -476,7 +476,7 @@
     margin-bottom: 0;
 }
             
-.content-text-petrol {
+.content-text__petrol {
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
@@ -487,7 +487,7 @@
     }
 }
             
-.content-text-date {
+.content-text__date {
     font-size: 14px;
     color: $primary-color-dark;
     line-height: 16px;
@@ -502,7 +502,7 @@
     }
 }
 
-.modal-window {
+.modal__window {
     position: absolute;
     top: 0;
     left: 0;
