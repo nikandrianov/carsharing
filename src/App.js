@@ -8,12 +8,12 @@ import AdminCarSetting from './pages/AdminCarSetting';
 import AdminOrderList from './pages/AdminOrderList';
 import AdminEntities from './pages/AdminEntities';
 import AdminError from './pages/AdminError';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
   render () {
     return (
-      <Router>
+      <HashRouter>
       <div className="App">
           <Switch>
               <Route exact path="/" component={Main}></Route>
@@ -25,7 +25,7 @@ class App extends React.Component {
               <Route exact path="/admin/error" component={AdminError}></Route>
           </Switch>
       </div>
-      </Router>
+      </HashRouter>
     );
   }
 }

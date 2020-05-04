@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "73828174b20cbd55d6f986142104b329",
+    "revision": "ed72113eee82956b22836760e216a889",
     "url": "/carsharing/index.html"
   },
   {
-    "revision": "1ed32f884f9bc548bad7",
+    "revision": "bd7148e72ca9e3f944e5",
     "url": "/carsharing/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "bbc768d25584e855ad38",
+    "revision": "5042cf3871b9abc6a3e8",
     "url": "/carsharing/static/css/main.63505063.chunk.css"
   },
   {
-    "revision": "1ed32f884f9bc548bad7",
-    "url": "/carsharing/static/js/2.fe3c5e1d.chunk.js"
+    "revision": "bd7148e72ca9e3f944e5",
+    "url": "/carsharing/static/js/2.b5e40bab.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/carsharing/static/js/2.fe3c5e1d.chunk.js.LICENSE.txt"
+    "url": "/carsharing/static/js/2.b5e40bab.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bbc768d25584e855ad38",
-    "url": "/carsharing/static/js/main.6ba5cddd.chunk.js"
+    "revision": "5042cf3871b9abc6a3e8",
+    "url": "/carsharing/static/js/main.01cd2d91.chunk.js"
   },
   {
     "revision": "05940a14996a5ce35dbd",
