@@ -3,48 +3,48 @@ import React from 'react';
 class AutoSetting extends React.Component {
     render() {
         return (
-            <div className="car-setting">
+            <div className="setting">
                 <h1>Настройки автомобиля</h1>
-                <div className="car-setting__inner item-top">
-                    <div className="car-setting__item">
-                        <label for="car-setting_model">Модель автомобиля</label>
-                        <input type="text" id="car-setting_model" />
+                <div className="item-setting item-setting__top">
+                    <div className="item-setting_style">
+                        <label>Модель автомобиля</label>
+                        <input type="text" className="item-setting__model" />
                     </div>
-                    <div className="car-setting__item type-margin">
-                        <label for="car-setting_type">Тип автомобиля</label>
-                        <input type="text" id="car-setting_type" />
+                    <div className="item-setting__margin item-setting_style">
+                        <label>Тип автомобиля</label>
+                        <input type="text" className="item-setting__type" />
                     </div>
                 </div>
-                <div className="car-setting__inner item-bot">
-                    <div className="car-setting__item">
-                        <label for="car-setting_colors">Доступные цвета</label>
-                        <input type="text" id="car-setting_colors" />
+                <div className="item-setting item-setting__bot">
+                    <div className="item-setting_style">
+                        <label>Доступные цвета</label>
+                        <input type="text" className="item-setting__colors" />
                     </div>
-                    <button className="btn colors-plus">
+                    <button className="btn item-setting_btnplus">
                         <span></span>
                     </button>
                 </div>
-                <div className="clr-checkbox">
+                {/* <div className="clr-checkbox">
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="defaultChecked1" checked />
-                        <label className="custom-control-label" for="defaultChecked1">Красный</label>
+                        <input type="checkbox" className="custom-control-input" id="defaultChecked1"/>
+                        <label className="custom-control-label">Красный</label>
                     </div>
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="defaultChecked2" checked />
-                        <label className="custom-control-label" for="defaultChecked2">Белый</label>
+                        <input type="checkbox" className="custom-control-input" id="defaultChecked2"/>
+                        <label className="custom-control-label">Белый</label>
                     </div>
                     <div className="custom-control custom-checkbox">
-                        <input type="checkbox" className="custom-control-input" id="defaultChecked3" checked />
-                        <label className="custom-control-label" for="defaultChecked3">Черный</label>
+                        <input type="checkbox" className="custom-control-input" id="defaultChecked3"/>
+                        <label className="custom-control-label">Черный</label>
                     </div>
-                </div>
+                </div> */}
                 <div className="btn-setting">
                     <div className="btn-setting__control">
-                        <button className="btn btn-default btn-primary control-save">Сохранить</button>
-                        <button className="btn btn-default control-cancel">Отменить</button>
+                        <button className="btn btn-setting_default btn-primary">Сохранить</button>
+                        <button className="btn btn-setting_default btn-setting__cancel">Отменить</button>
                     </div>
                     <div className="btn-setting__delete">
-                        <button className="btn btn-default btn-danger control-delete">Удалить</button>
+                        <button className="btn btn-setting_default btn-danger">Удалить</button>
                     </div>
                 </div>
             </div>

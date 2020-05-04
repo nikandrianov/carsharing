@@ -1,4 +1,4 @@
-.container-car-setting {
+.container__setting {
     display: flex;
 }
 
@@ -9,7 +9,7 @@
     height: 100%;
 }
 
-.sidebar__logo {
+.nav-body__header {
     background: $white;
     box-shadow: 0px 1px 0px #E1E5EB;
     display: flex;
@@ -29,7 +29,7 @@
     }
 }
 
-.sidebar__menu {
+.item-menu {
     display: flex;
     align-items: center;
     background: $white;
@@ -50,25 +50,31 @@
     }
 }
 
-.content-admin {
+.item-menu_active {
+    background: #FBFBFB;
+    box-shadow: inset 4px 0px 0px $blue-light, inset 0px -1px 0px #E1E5EB;
+    color: $blue-light;
+}
+
+.admin {
     width: 100%;
 }
 
-.content-admin__inner {
+.admin__inner {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.main_header {
+.header__admin {
     background: $white;
     box-shadow: 0px 2.5px 9.5px rgba(90, 97, 105, 0.12);
     display: flex;
     justify-content: space-between;
 }
 
-.main_header-search {
+.header__search {
     padding: 26px 0 26px 28px;
 }
 
@@ -84,11 +90,11 @@
     }
 }
 
-.main_header-userinfo {
+.header__userinfo {
     display: flex;
 }
 
-.userinfo_bell {
+.item-userinfo__bell {
     padding: 23.5px 26px;
     background: $white;
     box-shadow: -0.5px 0px 0px #CACEDB, 0.5px 0px 0px #CACEDB;
@@ -109,7 +115,7 @@
     margin-top: 15.5px;
 }
 
-.userinfo_user {
+.item-userinfo__user {
     padding: 14.5px 32.5px 14.5px 26px;
     display: flex;
     align-items: center;
@@ -131,7 +137,7 @@
     margin-right: 26px;
 }
 
-.car-content__inner {
+.car__body {
     padding: 27.5px 27px;
     h1 {
         font-size: 29px;
@@ -141,7 +147,7 @@
     }
 }
 
-.car-content__item {
+.car__content {
     margin-top: 30.5px;
     display: flex;
     align-items: flex-start;
@@ -264,7 +270,7 @@
     margin-top: 13.5px;
 }
 
-.car-setting {
+.setting {
     background: $white;
     box-shadow: 0px 2px 4px rgba(90, 97, 105, 0.12);
     border-radius: 9px;
@@ -284,21 +290,20 @@
     }
 }
 
-.car-setting__inner {
+.item-setting__top {
+    margin-top: 42px;
     justify-content: space-between;
     display: flex;
 }
 
-.item-top {
-    margin-top: 42px;
-}
-
-.item-bot {
+.item-setting__bot {
     margin-top: 30px;
     width: 321px;
+    justify-content: space-between;
+    display: flex;
 }
 
-.car-setting__item {
+.item-setting_style {
     position: relative;
     label {
         font-size: 10.5px;
@@ -306,13 +311,16 @@
         letter-spacing: -0.18421px;
         color: $primary-color-dark;
     }
+    input {
+        padding: 0 0 0 11px;
+    }
 }
 
-.type-margin {
+.item-setting__margin {
     margin-left: 21px;
 }
 
-#car-setting_type {
+.item-setting__type {
     width: 320px;
     height: 30px;
     background: $white;
@@ -325,7 +333,7 @@
     color: $primary-color-dark;
 }
 
-#car-setting_model {
+.item-setting__model {
     width: 320px;
     height: 30px;
     background: $white;
@@ -338,7 +346,7 @@
     color: $primary-color-dark;
 }
 
-#car-setting_colors {
+.item-setting__colors {
     height: 30px;
     width: 283px;
     background: $white;
@@ -351,16 +359,15 @@
     color: $primary-color-dark;
 }
 
-.colors-plus {
+.item-setting_btnplus {
     width: 30px;
     height: 30px;
     border: 1px solid #BECAD6;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: transparent;
-    margin-left: 8px;
     position: relative;
-    margin-top: 28px;
+    margin-top: 26px;
     span {
         height: 2px;
         background-color: #BECAD6;
@@ -408,7 +415,7 @@
     margin-top: 530px;
 }
 
-.btn-default {
+.btn-setting_default {
     height: 29px;
     width: 110px;
     font-size: 11.5px;
@@ -418,13 +425,13 @@
     color: $white;
 }
 
-.control-cancel {
+.btn-setting__cancel {
     margin-left: 12.5px;
     background: #E9ECEF;
     color: #3D5170;
 }
 
-.main_footer {
+.footer__body {
     background: $white;
     box-shadow: 0px -0.5px 0px #D7DAE3;
     display: flex;
@@ -434,7 +441,7 @@
     margin-top: 185.5px;
 }
 
-.footer-ul {
+.footer__link {
     display: flex;
     list-style: none;
     li {
@@ -447,7 +454,7 @@
     }
 }
 
-.footer-simbirsoft {
+.footer__copyright {
     p {
         margin-bottom: 0;
         font-weight: 500;

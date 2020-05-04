@@ -14,7 +14,7 @@ class CardAuto extends React.Component {
                 <div className="input-group car-img-file">
                     <div className="custom-file">
                         <input type="file" className="custom-file-input" id="inputGroupFile" />
-                        <label className="custom-file-label" for="inputGroupFile">Выберите файл...</label>
+                        <label className="custom-file-label">Выберите файл...</label>
                     </div>
                 </div>
                 <div className="progress-info">
@@ -23,7 +23,7 @@ class CardAuto extends React.Component {
                         <p className="text-procent">74%</p>
                     </div>
                     <div className="progress">
-                        <div className="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div className="progress-bar w-74" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
                 <div className="card-body card-description">

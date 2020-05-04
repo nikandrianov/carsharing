@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class FooterAdmin extends React.Component {
     render() {
         return (
-            <footer className="main_footer navber-fixed-bottom">
-                <div className="footer-ul">
-                    <li><a href="index.html">Главная страница</a></li>
-                    <li><a href="index.html">Ссылка</a></li>
+            <footer className="footer__body navbar-fixed-bottom">
+                <div className="footer__link">
+                    <li><Link to="/admin/setting">Главная страница</Link></li>
+                    <li><Link to="/admin/setting">Ссылка</Link></li>
                 </div>
-                <div className="footer-simbirsoft">
+                <div className="footer__copyright">
                     <p>Copyright © 2020 Simbirsoft</p>
                 </div>
             </footer>
