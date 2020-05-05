@@ -1,16 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class MainError extends React.Component {
     render() {
         return (
-            <main className="main_car-content">
-                <div className="error-page">
-                    <div className="error__main">
-                        <h1 className="error-cod">500</h1>
-                        <p className="error-title">Что-то пошло не так</p>
-                        <p className="error-subtitle">Попробуйте перезагрузить страницу</p>
-                        <button className="btn btn-primary error-btn-control">Назад</button>
-                    </div>
+            <main>
+                <div className="error">
+                    <h1 className="error__cod">500</h1>
+                    <p className="error__title">Что-то пошло не так</p>
+                    <p className="error__subtitle">Попробуйте перезагрузить страницу</p>
+                    <Link to="/admin/setting"><button className="btn btn-primary error__button">Назад</button></Link>
                 </div>
             </main>
         )

@@ -1,47 +1,48 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class MainEntities extends React.Component {
     render() {
         return (
-            <main className="main_car-content">
-                <div className="car-content__inner">
+            <main>
+                <div className="car__body">
                     <h1>Entitites</h1>
-                    <div className="content_entities">
-                        <div className="entities_header">
-                            <div className="input-group entities-choose">
-                                <select className="custom-select" id="inputGroupSelect01">
-                                    <option selected>Field</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                    <div className="car__entities">
+                        <div className="item-entities item-entites__header">
+                            <div className="input-group item-entites__choose">
+                                <select className="custom-select" id="inputGroupSelect1">
+                                    <option>Field</option>
+                                    <option>One</option>
+                                    <option>Two</option>
+                                    <option>Three</option>
                                 </select>
-                                <select className="custom-select" id="inputGroupSelect02">
-                                    <option selected>Field</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <select className="custom-select" id="inputGroupSelect2">
+                                    <option>Field</option>
+                                    <option>One</option>
+                                    <option>Two</option>
+                                    <option>Three</option>
                                 </select>
-                                <select className="custom-select" id="inputGroupSelect03">
-                                    <option selected>Field</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <select className="custom-select" id="inputGroupSelect3">
+                                    <option>Field</option>
+                                    <option>One</option>
+                                    <option>Two</option>
+                                    <option>Three</option>
                                 </select>
-                                <select className="custom-select" id="inputGroupSelect04">
-                                    <option selected>Field</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                <select className="custom-select" id="inputGroupSelect4">
+                                    <option>Field</option>
+                                    <option>One</option>
+                                    <option>Two</option>
+                                    <option>Three</option>
                                 </select>
                             </div>
-                            <div className="entities_btn-control">
-                                <button className="btn btn-danger entities-reset">Reset</button>
-                                <button className="btn btn-primary entities-apply">Apply</button>
+                            <div className="item-entities__button">
+                                <button className="btn btn-danger item-entities__reset">Reset</button>
+                                <button className="btn btn-primary item-entities__apply">Apply</button>
                             </div>
                         </div>
-                        <div className="entities_table">
+                        <div className="item-entities__table">
                             <table className="table table-borderless">
-                                <thead className="entities_thead">
+                                <thead className="item-entities__thead">
                                     <tr>
                                     <th>Header</th>
                                     <th>Header</th>
@@ -52,7 +53,7 @@ class MainEntities extends React.Component {
                                     <th>Header</th>
                                     </tr>
                                 </thead>
-                                <tbody className="entities_tbody">
+                                <tbody className="item-entities__tbody">
                                     <tr>
                                     <td>Value</td>
                                     <td>19,291</td>
@@ -119,22 +120,22 @@ class MainEntities extends React.Component {
                                 </tbody>
                             </table>
                         </div>
-                        <nav className="entities_pagination">
+                        <nav className="item-entities__pagination">
                             <ul className="pagination justify-content-center">
                                 <li className="page-item">
-                                    <a className="page-link" href="index.html" aria-label="Previous">
+                                    <Link className="page-link" to="/admin/entities" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                     <span className="sr-only">Previous</span>
-                                    </a>
+                                    </Link>
                                 </li>
-                                <li className="page-item"><a className="page-link" href="index.html">1</a></li>
-                                <li className="page-item active"><a className="page-link" href="index.html">2</a></li>
-                                <li className="page-item"><a className="page-link" href="index.html">3</a></li>
+                                <li className="page-item"><Link className="page-link" to="/admin/entities">1</Link></li>
+                                <li className="page-item active"><Link className="page-link" to="/admin/entities">2</Link></li>
+                                <li className="page-item"><Link className="page-link" to="/admin/entities">3</Link></li>
                                 <li className="page-item">
-                                    <a className="page-link" href="index.html" aria-label="Next">
+                                    <Link className="page-link" to="/admin/entities" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                     <span className="sr-only">Next</span>
-                                    </a>
+                                    </Link>
                                 </li>
                             </ul>
                         </nav>

@@ -316,7 +316,7 @@
     }
 }
 
-.item-setting__margin {
+.item-setting_margin {
     margin-left: 21px;
 }
 
@@ -391,20 +391,25 @@
     }
 }
 
-.clr-checkbox {
+.item-setting__checkbox {
     margin-top: 15px;
+    display: block;
 }
 
-.custom-control-label {
+.item-setting__chkcontrol {
+    display: block;
+    position: relative;
+    font-family: Roboto;
+    padding-left: 18px;
+    margin-top: 8px;
     font-size: 10px;
     line-height: 12px;
     letter-spacing: -0.175439px;
     color: #495057;
-}
-
-.custom-control-label::before, .custom-control-label::after {
-    width: 13px;
-    height: 13px;
+    input {
+        left: 0;
+        position: absolute;
+    }
 }
 
 .btn-setting {

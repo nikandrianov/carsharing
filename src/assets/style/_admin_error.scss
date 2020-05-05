@@ -1,9 +1,9 @@
-.error__main {
+.error {
     text-align: center;
     padding: 350px;
 }
 
-.error-cod {
+.error__cod {
     font-weight: 500;
     font-size: 75px;
     line-height: 88px;
@@ -13,7 +13,7 @@
     margin-bottom: 13px;
 }
 
-.error-title {
+.error__title {
     margin-bottom: 15px;
     font-size: 50px;
     line-height: 57px;
@@ -22,7 +22,7 @@
     color: #3D5170;
 }
 
-.error-subtitle {
+.error__subtitle {
     margin-bottom: 35px;
     font-size: 20px;
     line-height: 23px;
@@ -31,7 +31,7 @@
     color: #818EA3;
 }
 
-.error-btn-control {
+.error__button {
     width: 95px;
     height: 29px;
     font-size: 11px;

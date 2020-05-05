@@ -8,13 +8,13 @@ import MainOrderList from '../components/Admin/MainOrderList';
 class AdminOrderList extends React.Component {
     render() {
         return (
-            <div className="wrapper_admin">
-                <div className="container-fluid">
-                    <div className="container-car-setting">
+            <div className="wrapper__admin">
+                <div className="container__body container-fluid">
+                    <div className="container__setting">
                         <Sidebar />
-                        <div className="content-admin">
-                            <div className="content-admin__inner">
-                                <div className="content-admin__item">
+                        <div className="admin">
+                            <div className="admin__inner">
+                                <div className="admin__content">
                                     <HeaderAdmin />
                                     <MainOrderList />
                                     <FooterAdmin />
