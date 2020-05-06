@@ -4,11 +4,15 @@ import group from '../assets/image/Group.svg';
 import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
     render() {
         return (
             <header>
                 <div className="header__mobile">
-                    <div className="header__hamburger">
+                    <div className="header__hamburger" onClick={this.props.onClickHamburger}>
                         <div className="header__item">
                             <span className="item-hamburger"></span>
                         </div>

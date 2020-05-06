@@ -9,7 +9,7 @@ class NavMobile extends React.Component {
     render() {
         return (
             <nav className="nav__body">
-                <ul className="item-menu">
+                <ul className="nav__menu">
                     <li className="text-uppercase">Парковка</li>
                     <li className="text-uppercase">Страховка</li>
                     <li className="text-uppercase">Бензин</li>
