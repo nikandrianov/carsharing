@@ -194,7 +194,7 @@
 }
 
 .item-order__model, .item-order__color, .item-order__rent, .item-order__tarif, .item-order__petrol, .item-order__child, .item-order__right {
-    display: none;
+    display: flex;
 }
                     
 .order__price {

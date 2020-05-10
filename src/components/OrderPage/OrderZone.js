@@ -1,11 +1,10 @@
 import React from 'react';
+import AddModel from '../containers/AddModel';
 
 class OrderZone extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        }
+        this.state = {}
     }
     render() {
         return (
@@ -20,11 +19,7 @@ class OrderZone extends React.Component {
                             <p>{this.props.street}</p>
                         </div>
                     </div>
-                    <div className="item-order item-order__model" ref={this.props.textCar}>
-                        <p>Модель</p>
-                        <p>.....................................</p>
-                        <p className="item-order__text text-uppercase">{this.props.model}</p>
-                    </div>
+                    <AddModel />
                     <div className="item-order item-order__color" ref={this.props.textColor}>
                         <p>Цвет</p>
                         <p>..............................................</p>

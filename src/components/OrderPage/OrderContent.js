@@ -32,7 +32,6 @@ let itemModel = React.createRef();
 let itemDop = React.createRef();
 let itemMap = React.createRef();
 let itemItog = React.createRef();
-let textCar = React.createRef();
 let textColor = React.createRef();
 let textTarif = React.createRef();
 let textPetrol = React.createRef();
@@ -52,53 +51,6 @@ class OrderContent extends React.Component {
             child: "",
             wheel: "",
             checkbox: true,
-            cars: [
-                {
-                    id: 1,
-                    name: "elantra",
-                    price: "12 000 - 25 000 ₽",
-                    filterprice: 25000,
-                    src: elantra
-                },
-                {
-                    id: 2,
-                    name: "creta",
-                    price: "10 000 - 32 000 ₽",
-                    filterprice: 32000,
-                    src: creta
-                },
-                {
-                    id: 3,
-                    name: "i30 N",
-                    price: "12 000 - 25 000 ₽",
-                    filterprice: 25000,
-                    src: i30
-                },
-                {
-                    id: 4,
-                    name: "sonata",
-                    price: "10 000 - 32 000 ₽",
-                    filterprice: 32000,
-                    src: sonata
-                }
-            ],
-            filter: [
-                {
-                    title: "Все модели",
-                    name: "model",
-                    active: "span__active"
-                },
-                {
-                    title: "Эконом",
-                    name: "eko",
-                    active: ""
-                },
-                {
-                    title: "Премиум",
-                    name: "premium",
-                    active: ""
-                }
-            ],
             colors: [
                 {
                     title: "Любой",
@@ -150,7 +102,6 @@ class OrderContent extends React.Component {
         this.aClickMap = this.aClickMap.bind(this);
         this.aClickModel = this.aClickModel.bind(this);
         this.aClickDop = this.aClickDop.bind(this);
-        this.addCar = this.addCar.bind(this);
         this.addColor = this.addColor.bind(this);
         this.addTarif = this.addTarif.bind(this);
         this.addCheckbox = this.addCheckbox.bind(this);
@@ -279,11 +230,6 @@ class OrderContent extends React.Component {
         btnTotal.current.style.display = 'none';
     }
 
-    addCar (name) {
-        textCar.current.style.display = 'flex';
-        this.setState({ model: name});
-    }
-
     addColor (color) {
         this.setState({ color: color});
     }
@@ -354,10 +300,7 @@ class OrderContent extends React.Component {
                             contentLocation={contentLocation}
                         />
                         <Models
-                            cars={this.state.cars}
-                            filter={this.state.filter}
                             modelInner={modelInner}
-                            addCar={this.addCar}
                         />
                         <Additiontal 
                             colors={this.state.colors}
@@ -382,7 +325,6 @@ class OrderContent extends React.Component {
                         <OrderZone 
                             city={this.state.city}
                             street={this.state.street}
-                            model={this.state.model}
                             color={this.state.color}
                             tarifs={this.state.tarifs}
                             petrol={this.state.petrol}
@@ -397,7 +339,6 @@ class OrderContent extends React.Component {
                             btnItog={btnItog}
                             btnTotal={btnTotal}
                             btnCancel={btnCancel}
-                            textCar={textCar}
                             textColor={textColor}
                             textTarif={textTarif}
                             textPetrol={textPetrol}
