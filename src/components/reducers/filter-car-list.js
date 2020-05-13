@@ -3,7 +3,7 @@ export default function () {
         {
             id: 1,
             title: "Все модели",
-            name: "model",
+            name: "allmodel",
             active: "span__active"
         },
         {

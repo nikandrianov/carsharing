@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import telegram from '../assets/image/telegram.svg';
-import facebook from '../assets/image/facebook.svg';
-import instagram from '../assets/image/Instagram.svg';
-
 class NavMobile extends React.Component {
     render() {
         return (
@@ -17,13 +13,13 @@ class NavMobile extends React.Component {
                 </ul>
                 <ul className="item-messager">
                     <li className="item-messager__button">
-                        <Link to="/telegram.com"><img src={telegram} alt="telegram" /></Link>
+                        <Link to="https://telegram.com/" className="item-messager__telegram"></Link>
                     </li>
                     <li className="item-messager__button">
-                        <Link to="/facebook.com"><img src={facebook} alt="facebook" /></Link>
+                        <Link to="https://facebook.com/" className="item-messager__facebook"></Link>
                     </li>
                     <li className="item-messager__button">
-                        <Link to="/instagram.com"><img src={instagram} alt="Instagram" /></Link>
+                        <Link to="https://instagram.com/" className="item-messager__instagram"></Link>
                     </li>
                 </ul>
             </nav>

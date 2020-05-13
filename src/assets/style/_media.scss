@@ -177,6 +177,9 @@
                 order: 1;
                 color: $primary-color;
             }
+            a:hover {
+                color: $color-grey-light;
+            }
         }
     }
 

@@ -27,7 +27,7 @@ class HeaderAdmin extends React.Component {
                     <div className="item-userinfo dropdown">
                         <button id="my-dropdown" className="btn dropdown-toggle" data-toggle="dropdown"></button>
                         <div className="dropdown-menu dropdown-menu-left" aria-labelledby="my-dropdown">
-                            <Link to="/admin/setting" className="dropdown-item active">Admin2</Link>
+                            <Link to="/admin/setting" className="dropdown-item">Admin2</Link>
                         </div>
                     </div>
                 </div>

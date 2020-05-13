@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+let orderModel = React.createRef();
+
 class AddModel extends Component {
     render() {
         if (!this.props.car) {
@@ -13,7 +15,7 @@ class AddModel extends Component {
             )
         }
         return (
-            <div className="item-order item-order__model">
+            <div className="item-order item-order__model" ref={orderModel}>
                 <p>Модель</p>
                 <p>.....................................</p>
                 <p className="item-order__text text-uppercase">{this.props.car.name}</p>

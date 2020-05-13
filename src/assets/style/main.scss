@@ -216,6 +216,11 @@ body {
     margin-top: 60px;
 }
 
+.main__button:hover {
+    background: linear-gradient(90deg, #076432 2.61%, #013C27 112.6%);
+    background-blend-mode: darken;
+}
+
 footer {
     .footer__inner {
         display: flex;
@@ -234,6 +239,9 @@ footer {
             line-height: 15px;
             text-decoration: none;
             color: $primary-color-dark;
+        }
+        a:hover {
+            color: #0EC261;
         }
     }
 }
@@ -406,6 +414,36 @@ footer {
             margin: 0;
         }
     }
+}
+
+.item-messager__telegram {
+    width: 32px;
+    height: 32px;
+    mask-image: url(../image/telegram.svg);
+    background-color: white;
+}
+.item-messager__telegram:hover {
+    background-color: #0EC261;
+}
+
+.item-messager__facebook {
+    width: 32px;
+    height: 32px;
+    mask-image: url(../image/facebook.svg);
+    background-color: white;
+}
+.item-messager__facebook:hover {
+    background-color: #0EC261;
+}
+
+.item-messager__instagram {
+    width: 32px;
+    height: 32px;
+    mask-image: url(../image/Instagram.svg);
+    background-color: white;
+}
+.item-messager__instagram:hover {
+    background-color: #0EC261;
 }
 
 @import 'buttons';

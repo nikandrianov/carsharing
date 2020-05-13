@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { filterSelect } from '../actions/filter-select';
+import { filterSelect } from '../actions/index';
 
 class FilterCarList extends Component {
     showList () {
         return this.props.filtercar.map( (item) => (
-            <li className={`colors-li-${item.name}`} key={item.id} onClick={() => this.props.filterSelect (item)}><span className={`colors-span-${item.name} ${item.active}`}></span>{item.title}</li>
+            <li className={`colors-li-${item.name}`} key={item.id} onClick={() => this.props.filterSelect(item)}><span className={`colors-span-${item.name} ${item.active}`}></span>{item.title}</li>
         ))
     }
     render() {

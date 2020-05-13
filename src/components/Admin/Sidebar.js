@@ -18,7 +18,7 @@ class Sidebar extends React.Component {
                     <nav className="nav-body">
                         <header className="nav-body__header">
                             <img src={ logoAdmin } alt="logo_admin_car" />
-                            <h1>Need fo drive</h1>
+                            <h1>Need for drive</h1>
                         </header>
                         <ul className="nav-body__menu">
                             <Link to="/admin/setting">

@@ -8,11 +8,6 @@ import Total from './Total';
 import ModalWindow from './ModalWindow';
 import OrderZone from './OrderZone';
 
-import elantra from '../../assets/image/cars/elantra.png';
-import creta from '../../assets/image/cars/creta.png';
-import i30 from '../../assets/image/cars/i30n.png';
-import sonata from '../../assets/image/cars/sonata.png';
-
 let contentLocation = React.createRef();
 let modelInner = React.createRef();
 let dopInner = React.createRef();
