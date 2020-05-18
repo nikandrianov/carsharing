@@ -8,7 +8,7 @@ class Order extends React.Component {
         return (
             <div className="wrapper">
                 <div className="container__inner">
-                    <div className="container__item">
+                    <div className="container__order">
                         <Menu />
                         <div className="container-fluid">
                             <HeaderOrder />

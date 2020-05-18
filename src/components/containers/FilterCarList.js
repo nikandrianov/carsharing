@@ -24,8 +24,8 @@ function mapStateToProps (state) {
     }
 }
 
-function matchDispatchToProps (dispatch) {
+function mapDispatchToProps (dispatch) {
     return bindActionCreators({filterSelect: filterSelect}, dispatch)
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(FilterCarList);
+export default connect(mapStateToProps, mapDispatchToProps)(FilterCarList);

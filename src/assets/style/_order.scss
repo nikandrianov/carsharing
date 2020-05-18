@@ -1,3 +1,7 @@
+.container__order {
+    display: flex;
+}
+
 .container-fluid {
     width: 100%;
     padding-left: 0;
@@ -194,7 +198,7 @@
 }
 
 .item-order__model, .item-order__color, .item-order__rent, .item-order__tarif, .item-order__petrol, .item-order__child, .item-order__right {
-    display: flex;
+    display: none;
 }
                     
 .order__price {

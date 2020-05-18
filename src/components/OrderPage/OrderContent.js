@@ -40,37 +40,11 @@ class OrderContent extends React.Component {
             city: "",
             street: "",
             model: "",
-            color: "Любой",
             tarifs: "",
             petrol: "",
             child: "",
             wheel: "",
             checkbox: true,
-            colors: [
-                {
-                    title: "Любой",
-                    color: "random",
-                    active: "span__active"
-                },
-                {
-                    title: "Красный",
-                    color: "red",
-                    active: ""
-                },
-                {
-                    title: "Голубой",
-                    color: "blue",
-                    active: ""
-                }
-            ],
-            tarif: [
-                {
-                    title: "Поминутно, 7₽/мин"
-                },
-                {
-                    title: "На сутки, 1999 ₽/сутки"
-                }
-            ],
             services: [
                 {
                     title: "Полный бак, 500р"
@@ -97,8 +71,6 @@ class OrderContent extends React.Component {
         this.aClickMap = this.aClickMap.bind(this);
         this.aClickModel = this.aClickModel.bind(this);
         this.aClickDop = this.aClickDop.bind(this);
-        this.addColor = this.addColor.bind(this);
-        this.addTarif = this.addTarif.bind(this);
         this.addCheckbox = this.addCheckbox.bind(this);
     }
 
@@ -150,7 +122,6 @@ class OrderContent extends React.Component {
         itemDop.current.classList.remove('item-nav_disabled');
         btnDop.current.style.display = 'none';
         btnItog.current.style.display = 'block';
-        textColor.current.style.display = 'flex';
     }
 
     btnClickItog () {
@@ -225,15 +196,6 @@ class OrderContent extends React.Component {
         btnTotal.current.style.display = 'none';
     }
 
-    addColor (color) {
-        this.setState({ color: color});
-    }
-
-    addTarif (e) {
-        textTarif.current.style.display = 'flex';
-        this.setState({ tarifs: e});
-    }
-
     addCheckbox (e) {
         console.log(this.state.checkbox);
         if ( e === "Полный бак, 500р") {
@@ -298,12 +260,8 @@ class OrderContent extends React.Component {
                             modelInner={modelInner}
                         />
                         <Additiontal 
-                            colors={this.state.colors}
-                            tarif={this.state.tarif}
                             services={this.state.services}
                             dopInner={dopInner}
-                            addColor={this.addColor}
-                            addTarif={this.addTarif}
                             addCheckbox={this.addCheckbox}
                         />
                         <Total 

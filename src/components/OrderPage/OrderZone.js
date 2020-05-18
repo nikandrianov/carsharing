@@ -1,5 +1,7 @@
 import React from 'react';
 import AddModel from '../containers/AddModel';
+import AddColors from '../containers/AddColors';
+import AddTarif from '../containers/AddTarif';
 
 class OrderZone extends React.Component {
     constructor(props) {
@@ -20,20 +22,12 @@ class OrderZone extends React.Component {
                         </div>
                     </div>
                     <AddModel />
-                    <div className="item-order item-order__color" ref={this.props.textColor}>
-                        <p>Цвет</p>
-                        <p>..............................................</p>
-                        <p className="item-order__text">{this.props.color}</p>
-                    </div>
+                    <AddColors />
                     <div className="item-order item-order__rent">
                         <p>Длительность аренды</p>
                         <p className="item-order__text"></p>
                     </div>
-                    <div className="item-order item-order__tarif" ref={this.props.textTarif}>
-                        <p>Тариф</p>
-                        <p>.....................</p>
-                        <p className="item-order__text">{this.props.tarifs}</p>
-                    </div>
+                    <AddTarif />
                     <div className="item-order item-order__petrol" ref={this.props.textPetrol}>
                         <p>Полный бак</p>
                         <p>......................................</p>

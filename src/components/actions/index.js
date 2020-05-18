@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const selectCar = (car) => {
     return {
         type: "CAR_SELECTED",
@@ -9,5 +11,32 @@ export const filterSelect = (filter) => {
     return {
         type: "FILTER_SELECTED",
         payload: filter
+    }
+}
+
+export const colorsSelect = (color) => {
+    return {
+        type: "COLORS_SELECTED",
+        payload: color
+    }
+}
+
+export const tarifSelect = (tarif) => {
+    return {
+        type: "TARIF_SELECTED",
+        payload: tarif
+    }
+}
+
+export const getAllCars = () => {
+    return (dispatch) => {
+        axios.get(`http://api-factory.simbirsoft1.com/api/db/car`, 
+        {headers: {'X-Api-Factory-Application-Id': "5e25c641099b810b946c5d5b"}})
+            .then(res => {
+                dispatch({
+                    type: "ALL_CARS",
+                    payload: res.data.data
+                })
+            })
     }
 }
