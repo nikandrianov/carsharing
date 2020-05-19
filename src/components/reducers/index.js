@@ -9,6 +9,7 @@ import ColorsSelected from './color-select';
 import TarifsReducer from './tarif';
 import TarifSelected from './tarif-select';
 import GetAllCars from './car.reducer';
+import GetAllTarifs from './tarif.reducer';
 
 const allReducers = combineReducers ({
     cars: CarReducer,
@@ -20,7 +21,8 @@ const allReducers = combineReducers ({
     colorsselect: ColorsSelected,
     tarifs: TarifsReducer,
     tarifselect: TarifSelected,
-    allcars: GetAllCars
+    allcars: GetAllCars,
+    alltarifs: GetAllTarifs,
 }) 
 
 export default allReducers;

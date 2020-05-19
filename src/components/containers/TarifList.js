@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { tarifSelect } from '../actions/index';
+import { getAllTarif } from '../actions/index';
 
 class TarifList extends Component {
+
+    componentDidMount() {
+        this.props.getAllTarif();
+    }
+
     showList () {
-        return this.props.tarifs.map( (item) => (
-            <li key={item.id} onClick={() => this.props.tarifSelect(item)}><span></span>{item.title}</li>)
+        return this.props.alltarifs.map( (item) => (
+        <li key={item.id} onClick={() => this.props.tarifSelect(item)}><span></span>{item.rateTypeId.name}, {item.price} ₽/{item.rateTypeId.unit}</li>)
         )
     }
     render() {
@@ -25,12 +31,16 @@ class TarifList extends Component {
 
 function mapStateToProps (state) {
     return {
-        tarifs: state.tarifs
+        tarifs: state.tarifs,
+        alltarifs: state.alltarifs
     }
 }
 
 function mapDispatchToProps (dispatch) {
-    return bindActionCreators({tarifSelect: tarifSelect}, dispatch)
+    return {
+        tarifSelect: bindActionCreators(tarifSelect, dispatch),
+        getAllTarif: bindActionCreators(getAllTarif, dispatch)
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TarifList);

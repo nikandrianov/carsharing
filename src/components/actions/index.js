@@ -30,11 +30,26 @@ export const tarifSelect = (tarif) => {
 
 export const getAllCars = () => {
     return (dispatch) => {
-        axios.get(`http://api-factory.simbirsoft1.com/api/db/car`, 
-        {headers: {'X-Api-Factory-Application-Id': "5e25c641099b810b946c5d5b"}})
+        axios.get(`http://api-factory.simbirsoft1.com/api/db/car`, {
+            headers: {'X-Api-Factory-Application-Id': "5e25c641099b810b946c5d5b"}
+        })
             .then(res => {
                 dispatch({
                     type: "ALL_CARS",
+                    payload: res.data.data
+                })
+            })
+    }
+}
+
+export const getAllTarif = () => {
+    return (dispatch) => {
+        axios.get(`http://api-factory.simbirsoft1.com/api/db/rate`, {
+            headers: {'X-Api-Factory-Application-Id': "5e25c641099b810b946c5d5b"}
+        })
+            .then(res => {
+                dispatch({
+                    type: "ALL_TARIFS",
                     payload: res.data.data
                 })
             })

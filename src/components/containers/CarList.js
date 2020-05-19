@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import CarFilter from '../OrderPage/CarFilter';
-import {getAllCars} from '../actions/index';
+import { getAllCars } from '../actions/index';
 
 class CarList extends Component {
     componentDidMount() {

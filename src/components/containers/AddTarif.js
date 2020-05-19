@@ -16,7 +16,7 @@ class AddTarif extends Component {
             <div className="item-order item-order__tarif" style={{ display: "flex"}}>
                 <p>Тариф</p>
                 <p>.....................</p>
-                <p className="item-order__text">{this.props.tarif.title}</p>
+                <p className="item-order__text">{this.props.tarif.rateTypeId.name}, {this.props.tarif.price} ₽/{this.props.tarif.rateTypeId.unit}</p>
             </div>
         )
     }
