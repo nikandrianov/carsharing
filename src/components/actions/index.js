@@ -1,29 +1,37 @@
+import {
+    CAR_SELECTED,
+    FILTER_SELECTED,
+    COLORS_SELECTED,
+    TARIF_SELECTED,
+    ALL_CARS,
+    ALL_TARIFS
+} from './types';
 import axios from "axios";
 
 export const selectCar = (car) => {
     return {
-        type: "CAR_SELECTED",
+        type: CAR_SELECTED,
         payload: car
     }
 }
 
 export const filterSelect = (filter) => {
     return {
-        type: "FILTER_SELECTED",
+        type: FILTER_SELECTED,
         payload: filter
     }
 }
 
 export const colorsSelect = (color) => {
     return {
-        type: "COLORS_SELECTED",
+        type: COLORS_SELECTED,
         payload: color
     }
 }
 
 export const tarifSelect = (tarif) => {
     return {
-        type: "TARIF_SELECTED",
+        type: TARIF_SELECTED,
         payload: tarif
     }
 }
@@ -35,7 +43,7 @@ export const getAllCars = () => {
         })
             .then(res => {
                 dispatch({
-                    type: "ALL_CARS",
+                    type: ALL_CARS,
                     payload: res.data.data
                 })
             })
@@ -49,7 +57,7 @@ export const getAllTarif = () => {
         })
             .then(res => {
                 dispatch({
-                    type: "ALL_TARIFS",
+                    type: ALL_TARIFS,
                     payload: res.data.data
                 })
             })

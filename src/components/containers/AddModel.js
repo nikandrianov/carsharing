@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class AddModel extends Component {
     render() {
-        if (!this.props.car) {
+        if (!this.props.order) {
             return (
             <div className="item-order item-order__model">
                 <p>Модель</p>
@@ -16,7 +16,7 @@ class AddModel extends Component {
             <div className="item-order item-order__model" style={{ display: "flex"}}>
                 <p>Модель</p>
                 <p>.............</p>
-                <p className="item-order__text text-uppercase">{this.props.car.name}</p>
+                <p className="item-order__text text-uppercase">{this.props.order.car.name}</p>
             </div>
         )
     }
@@ -24,7 +24,7 @@ class AddModel extends Component {
 
 function mapStateToProps (state) {
     return {
-        car: state.select
+        order: state.order
     }
 }
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class AddColors extends Component {
     render() {
-        if (!this.props.color) {
+        if (!this.props.order) {
             return (
                 <div className="item-order item-order__color">
                     <p>Цвет</p>
@@ -16,7 +16,7 @@ class AddColors extends Component {
             <div className="item-order item-order__color" style={{ display: "flex" }}>
                 <p>Цвет</p>
                 <p>..............................................</p>
-                <p className="item-order__text">{this.props.color.title}</p>
+                <p className="item-order__text">{this.props.order.color.title}</p>
             </div>
         )
     }
@@ -24,7 +24,7 @@ class AddColors extends Component {
 
 function mapStateToProps (state) {
     return {
-        color: state.colorsselect
+        order: state.order
     }
 }
 

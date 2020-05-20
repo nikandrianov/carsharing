@@ -9,24 +9,24 @@ class CarList extends Component {
         this.props.getAllCars()
     }
     showList () {
-        if (!this.props.filter) {
-            return this.props.allcars.map( (item) => (
+        if (!this.props.order.filter.name) {
+            return this.props.order.allcars.map( (item) => (
                 <CarFilter item={item} key={item.id}/>
             ))
         }
-        else if (this.props.filter.name === "eko") {
-            const filtercar = this.props.allcars.filter( item => item.priceMax < 32000);
+        else if (this.props.order.filter.name === "eko") {
+            const filtercar = this.props.order.allcars.filter( item => item.priceMax < 32000);
             return filtercar.map( (item) => (
                 <CarFilter item={item} key={item.id}/>
             ))
         }
-        else if (this.props.filter.name === "allmodel") {
-            return this.props.allcars.map( (item) => (
+        else if (this.props.order.filter.name === "allmodel") {
+            return this.props.order.allcars.map( (item) => (
                 <CarFilter item={item} key={item.id}/>
             ))
         }
-        else if (this.props.filter.name === "premium") {
-            const filtercar = this.props.allcars.filter( item => item.priceMax >= 32000);
+        else if (this.props.order.filter.name === "premium") {
+            const filtercar = this.props.order.allcars.filter( item => item.priceMax >= 32000);
             return filtercar.map( (item) => (
                 <CarFilter item={item} key={item.id}/>
             ))
@@ -43,9 +43,7 @@ class CarList extends Component {
 
 function mapStateToProps (state) {
     return {
-        cars: state.cars,
-        filter: state.filterselect,
-        allcars: state.allcars
+        order: state.order,
     }
 }
 

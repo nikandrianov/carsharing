@@ -23,12 +23,14 @@ class CarFilter extends Component {
 
 function mapStateToProps (state) {
     return {
-        cars: state.cars
+        order: state.order
     }
 }
 
 function matchDispatchToProps (dispatch) {
-    return bindActionCreators({selectCar: selectCar}, dispatch)
+    return {
+        selectCar: bindActionCreators(selectCar, dispatch)
+    }
 }
 
 export default connect(mapStateToProps, matchDispatchToProps)(CarFilter);

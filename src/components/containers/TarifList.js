@@ -11,7 +11,7 @@ class TarifList extends Component {
     }
 
     showList () {
-        return this.props.alltarifs.map( (item) => (
+        return this.props.order.alltarifs.map( (item) => (
         <li key={item.id} onClick={() => this.props.tarifSelect(item)}><span></span>{item.rateTypeId.name}, {item.price} ₽/{item.rateTypeId.unit}</li>)
         )
     }
@@ -31,8 +31,7 @@ class TarifList extends Component {
 
 function mapStateToProps (state) {
     return {
-        tarifs: state.tarifs,
-        alltarifs: state.alltarifs
+        order: state.order
     }
 }
 
