@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "608b73d28af5093f1e18d04675748d7c",
+    "revision": "446a9b36eda11387ec7c943912f72de5",
     "url": "/carsharing/index.html"
   },
   {
-    "revision": "a266c23dd3e4f6146a91",
+    "revision": "e830d7b0225aef16bfe2",
     "url": "/carsharing/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "88a427c367150eff6b1e",
-    "url": "/carsharing/static/css/main.211f302a.chunk.css"
+    "revision": "1a766ad0bd05b72c5fa5",
+    "url": "/carsharing/static/css/main.810c27a4.chunk.css"
   },
   {
-    "revision": "a266c23dd3e4f6146a91",
-    "url": "/carsharing/static/js/2.212b7b3b.chunk.js"
+    "revision": "e830d7b0225aef16bfe2",
+    "url": "/carsharing/static/js/2.41885356.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/carsharing/static/js/2.212b7b3b.chunk.js.LICENSE.txt"
+    "url": "/carsharing/static/js/2.41885356.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "88a427c367150eff6b1e",
-    "url": "/carsharing/static/js/main.87881379.chunk.js"
+    "revision": "1a766ad0bd05b72c5fa5",
+    "url": "/carsharing/static/js/main.48c1a056.chunk.js"
   },
   {
     "revision": "05940a14996a5ce35dbd",
@@ -48,16 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/carsharing/static/media/check.63c4dcd7.svg"
   },
   {
-    "revision": "0b85f5a7b19b2116ae77685b918a4a2d",
-    "url": "/carsharing/static/media/creta.0b85f5a7.png"
-  },
-  {
     "revision": "388fe13df36e2b1bbe716dda7ecbb69f",
     "url": "/carsharing/static/media/edit.388fe13d.svg"
-  },
-  {
-    "revision": "0582c8e0ca13c474c9a25fa21bf5fcbb",
-    "url": "/carsharing/static/media/elantra.0582c8e0.png"
   },
   {
     "revision": "f16167c861b373a4e6e9c5d07b75cc36",
@@ -126,10 +118,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "89dabcc938e1eb70bbc14b98b465c7b0",
     "url": "/carsharing/static/media/slide4.89dabcc9.png"
-  },
-  {
-    "revision": "61f9ea401835015c6da2e57617073dab",
-    "url": "/carsharing/static/media/sonata.61f9ea40.png"
   },
   {
     "revision": "72cf4fdf04acfa335b67a58122afa92b",
