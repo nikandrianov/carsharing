@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class AddModel extends Component {
     render() {
-        if (!this.props.order) {
+        if (!this.props.order.car.name) {
             return (
             <div className="item-order item-order__model">
                 <p>Модель</p>

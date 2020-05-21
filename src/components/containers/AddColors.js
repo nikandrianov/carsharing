@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 class AddColors extends Component {
     render() {
-        if (!this.props.order) {
+        if (!this.props.order.color.title) {
             return (
                 <div className="item-order item-order__color">
                     <p>Цвет</p>

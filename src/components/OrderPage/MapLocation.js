@@ -1,6 +1,6 @@
 import React from 'react';
 
-import map from '../../assets/image/map.png';
+import map from '../../assets/image/map.jpg';
 import x from '../../assets/image/x.svg';
 
 class MapLocation extends React.Component {

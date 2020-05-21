@@ -6,7 +6,7 @@ import { colorsSelect } from '../actions/index';
 class ColorsList extends Component {
     showList () {
         return this.props.colors.map( (item) => (
-            <li className={`colors-li-${item.color}`} key={item.id} onClick={() => this.props.colorsSelect(item)}><span className={`colors-span-${item.color} ${item.active}`}></span>{item.title}</li>
+            <li className={`colors-li-${item.color}`} key={item.id} onClick={() => this.props.colorsSelect(item)}><span className={`colors-span-${item.color}`}></span>{item.title}</li>
         ))
     }
     render() {
@@ -25,7 +25,7 @@ class ColorsList extends Component {
 
 function mapStateToProps (state) {
     return {
-        colors: state.colors
+        colors: state.colors,
     }
 }
 

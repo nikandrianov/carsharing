@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/carsharing/static/css/main.810c27a4.chunk.css",
-    "main.js": "/carsharing/static/js/main.48c1a056.chunk.js",
-    "main.js.map": "/carsharing/static/js/main.48c1a056.chunk.js.map",
+    "main.js": "/carsharing/static/js/main.003dc85d.chunk.js",
+    "main.js.map": "/carsharing/static/js/main.003dc85d.chunk.js.map",
     "runtime-main.js": "/carsharing/static/js/runtime-main.fb4b239a.js",
     "runtime-main.js.map": "/carsharing/static/js/runtime-main.fb4b239a.js.map",
     "static/css/2.de424728.chunk.css": "/carsharing/static/css/2.de424728.chunk.css",
     "static/js/2.41885356.chunk.js": "/carsharing/static/js/2.41885356.chunk.js",
     "static/js/2.41885356.chunk.js.map": "/carsharing/static/js/2.41885356.chunk.js.map",
     "index.html": "/carsharing/index.html",
-    "precache-manifest.3569992554a7512e38ef13a3b4845c08.js": "/carsharing/precache-manifest.3569992554a7512e38ef13a3b4845c08.js",
+    "precache-manifest.79e870fca1ae5f0c55df3c719dd18770.js": "/carsharing/precache-manifest.79e870fca1ae5f0c55df3c719dd18770.js",
     "service-worker.js": "/carsharing/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/carsharing/static/css/2.de424728.chunk.css.map",
     "static/css/main.810c27a4.chunk.css.map": "/carsharing/static/css/main.810c27a4.chunk.css.map",
@@ -22,7 +22,7 @@
     "static/media/edit.svg": "/carsharing/static/media/edit.388fe13d.svg",
     "static/media/i30n.png": "/carsharing/static/media/i30n.631059c7.png",
     "static/media/logo_admin_auth.svg": "/carsharing/static/media/logo_admin_auth.0f512718.svg",
-    "static/media/map.png": "/carsharing/static/media/map.7e861c98.png",
+    "static/media/map.jpg": "/carsharing/static/media/map.d29fe0d4.jpg",
     "static/media/menu1.svg": "/carsharing/static/media/menu1.69646946.svg",
     "static/media/menu2.svg": "/carsharing/static/media/menu2.e6fd5fd6.svg",
     "static/media/menu3.svg": "/carsharing/static/media/menu3.f31daeb8.svg",
@@ -32,10 +32,10 @@
     "static/media/menu7.svg": "/carsharing/static/media/menu7.64518b9e.svg",
     "static/media/reject.svg": "/carsharing/static/media/reject.ea8c382a.svg",
     "static/media/search.svg": "/carsharing/static/media/search.dbc597a8.svg",
-    "static/media/slide1.png": "/carsharing/static/media/slide1.1a47529f.png",
-    "static/media/slide2.png": "/carsharing/static/media/slide2.5843c669.png",
-    "static/media/slide3.png": "/carsharing/static/media/slide3.f835e73d.png",
-    "static/media/slide4.png": "/carsharing/static/media/slide4.89dabcc9.png",
+    "static/media/slide1.jpg": "/carsharing/static/media/slide1.c216d080.jpg",
+    "static/media/slide2.jpg": "/carsharing/static/media/slide2.b765ef2c.jpg",
+    "static/media/slide3.jpg": "/carsharing/static/media/slide3.98b05d45.jpg",
+    "static/media/slide4.jpg": "/carsharing/static/media/slide4.3ebbbed1.jpg",
     "static/media/x.svg": "/carsharing/static/media/x.9f1b3b91.svg"
   },
   "entrypoints": [
@@ -43,6 +43,6 @@
     "static/css/2.de424728.chunk.css",
     "static/js/2.41885356.chunk.js",
     "static/css/main.810c27a4.chunk.css",
-    "static/js/main.48c1a056.chunk.js"
+    "static/js/main.003dc85d.chunk.js"
   ]
 }
