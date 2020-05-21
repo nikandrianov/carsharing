@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "446a9b36eda11387ec7c943912f72de5",
+    "revision": "68a971cff5eb4dfe502599d3a0c34432",
     "url": "/carsharing/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/carsharing/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "1a766ad0bd05b72c5fa5",
+    "revision": "7052797f7a5e344eb870",
     "url": "/carsharing/static/css/main.810c27a4.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/carsharing/static/js/2.41885356.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1a766ad0bd05b72c5fa5",
-    "url": "/carsharing/static/js/main.48c1a056.chunk.js"
+    "revision": "7052797f7a5e344eb870",
+    "url": "/carsharing/static/js/main.003dc85d.chunk.js"
   },
   {
     "revision": "05940a14996a5ce35dbd",
@@ -64,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/carsharing/static/media/logo_admin_auth.0f512718.svg"
   },
   {
-    "revision": "7e861c9835e23f10319ce662633e23f6",
-    "url": "/carsharing/static/media/map.7e861c98.png"
+    "revision": "d29fe0d4fa484354ad1a5f7961f43ecb",
+    "url": "/carsharing/static/media/map.d29fe0d4.jpg"
   },
   {
     "revision": "69646946349219dc67a09ca4ea0ce37b",
@@ -104,20 +104,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/carsharing/static/media/search.dbc597a8.svg"
   },
   {
-    "revision": "1a47529f3c95b50349a9ac606ed4712a",
-    "url": "/carsharing/static/media/slide1.1a47529f.png"
+    "revision": "c216d080c04d9d522d4fa14002c995a5",
+    "url": "/carsharing/static/media/slide1.c216d080.jpg"
   },
   {
-    "revision": "5843c66984e39298bb6513c616f925c9",
-    "url": "/carsharing/static/media/slide2.5843c669.png"
+    "revision": "b765ef2c817126a7c8463a14ae84eb59",
+    "url": "/carsharing/static/media/slide2.b765ef2c.jpg"
   },
   {
-    "revision": "f835e73d292ea6f0a3d2fd86ac713bb0",
-    "url": "/carsharing/static/media/slide3.f835e73d.png"
+    "revision": "98b05d45a85e046888931e5b2984d6a9",
+    "url": "/carsharing/static/media/slide3.98b05d45.jpg"
   },
   {
-    "revision": "89dabcc938e1eb70bbc14b98b465c7b0",
-    "url": "/carsharing/static/media/slide4.89dabcc9.png"
+    "revision": "3ebbbed120e817b6185964dab611f01c",
+    "url": "/carsharing/static/media/slide4.3ebbbed1.jpg"
   },
   {
     "revision": "72cf4fdf04acfa335b67a58122afa92b",
