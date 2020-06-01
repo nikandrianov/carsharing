@@ -25,7 +25,8 @@ class OrderZone extends React.Component {
                     <AddColors />
                     <div className="item-order item-order__rent">
                         <p>Длительность аренды</p>
-                        <p className="item-order__text"></p>
+                        <p>............</p>
+                        <p className="item-order__text">{this.props.rentDate}</p>
                     </div>
                     <AddTarif />
                     <div className="item-order item-order__petrol" ref={this.props.textPetrol}>

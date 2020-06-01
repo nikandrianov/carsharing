@@ -4,9 +4,14 @@ import x from '../../assets/image/x.svg';
 let date = new Date();
 let a = date.getMonth();
 let month = a + 1;
-let now = date.getDate() + '.' + month + '.' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes();
+let now = date.getDate(0) + '.' + month + '.' + date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes();
 
-export default class DateList extends Component {
+class DateList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
     render() {
         return (
             <div>
@@ -19,7 +24,7 @@ export default class DateList extends Component {
                         </div>
                         <div className="form-rent__date">
                             <label>По</label>
-                            <input className="form-rent__input" type="datetime-local" name="end-rent" placeholder="Введите дату и время" />
+                            <input className="form-rent__input" type="datetime-local" onChange={this.props.inputChange} name="end-rent" placeholder="Введите дату и время" />
                             <img src={ x } alt="x"/>
                         </div>
                     </form>
@@ -27,3 +32,5 @@ export default class DateList extends Component {
         )
     }
 }
+
+export default DateList;

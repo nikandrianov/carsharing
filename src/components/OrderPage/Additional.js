@@ -13,7 +13,9 @@ class Additiontal extends React.Component {
             <div className="dop" ref={this.props.dopInner}>
                 <div className="dop__options">
                     <ColorsList />
-                    <DateList />
+                    <DateList 
+                        inputChange={this.props.inputChange}
+                    />
                     <TarifList />
                     <h4 className="dop__options title">Доп услуги</h4>
                     <div className="services">

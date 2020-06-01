@@ -39,11 +39,10 @@ class OrderContent extends React.Component {
         this.state = {
             city: "",
             street: "",
-            model: "",
-            tarifs: "",
             petrol: "",
             child: "",
             wheel: "",
+            rentDate: "",
             checkbox: true,
             services: [
                 {
@@ -72,6 +71,7 @@ class OrderContent extends React.Component {
         this.aClickModel = this.aClickModel.bind(this);
         this.aClickDop = this.aClickDop.bind(this);
         this.addCheckbox = this.addCheckbox.bind(this);
+        this.inputChange = this.inputChange.bind(this);
     }
 
     cityClick () {
@@ -98,6 +98,30 @@ class OrderContent extends React.Component {
         this.setState ({
             street: e.target.value
         })
+    }
+
+    inputChange (e) {
+        e.preventDefault();
+        let date = new Date();
+        let dateValue = new Date(e.target.value);
+        let dataRent = new Date(dateValue.getTime() - date.getTime());
+        let remainsSec = (parseInt(dataRent / 1000));
+        let remainsFullDays = (parseInt(remainsSec / (24 * 60 * 60)));
+        let secInLastDay = remainsSec - remainsFullDays * 24 * 3600;
+        let remainsFullHours = (parseInt(secInLastDay / 3600));
+        // let remainsMinutes = (parseInt(secInLastHour / 60));
+        // let lastSec = secInLastHour - remainsMinutes * 60;
+        if (dateValue < date) {
+            alert('Дата бронирования меньше текущей даты, введите корректную дату...')
+            this.setState ({
+                rentDate: ""
+            })
+        }
+        else {
+            this.setState ({
+                rentDate: `${remainsFullDays} д ${remainsFullHours} ч`
+            })
+        }
     }
 
     btnClickModel () {
@@ -263,6 +287,8 @@ class OrderContent extends React.Component {
                             services={this.state.services}
                             dopInner={dopInner}
                             addCheckbox={this.addCheckbox}
+                            rentDate={this.state.rentDate}
+                            inputChange={this.inputChange}
                         />
                         <Total 
                             totalInner={totalInner}
@@ -278,11 +304,10 @@ class OrderContent extends React.Component {
                         <OrderZone 
                             city={this.state.city}
                             street={this.state.street}
-                            color={this.state.color}
-                            tarifs={this.state.tarifs}
                             petrol={this.state.petrol}
                             child={this.state.child}
                             wheel={this.state.wheel}
+                            rentDate={this.state.rentDate}
                             btnClickModel={this.btnClickModel}
                             btnClickDop={this.btnClickDop}
                             btnClickItog={this.btnClickItog}
