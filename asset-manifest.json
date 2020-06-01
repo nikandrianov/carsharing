@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/carsharing/static/css/main.810c27a4.chunk.css",
-    "main.js": "/carsharing/static/js/main.003dc85d.chunk.js",
-    "main.js.map": "/carsharing/static/js/main.003dc85d.chunk.js.map",
+    "main.css": "/carsharing/static/css/main.a101634a.chunk.css",
+    "main.js": "/carsharing/static/js/main.90283db2.chunk.js",
+    "main.js.map": "/carsharing/static/js/main.90283db2.chunk.js.map",
     "runtime-main.js": "/carsharing/static/js/runtime-main.fb4b239a.js",
     "runtime-main.js.map": "/carsharing/static/js/runtime-main.fb4b239a.js.map",
     "static/css/2.de424728.chunk.css": "/carsharing/static/css/2.de424728.chunk.css",
-    "static/js/2.41885356.chunk.js": "/carsharing/static/js/2.41885356.chunk.js",
-    "static/js/2.41885356.chunk.js.map": "/carsharing/static/js/2.41885356.chunk.js.map",
+    "static/js/2.43b2ed90.chunk.js": "/carsharing/static/js/2.43b2ed90.chunk.js",
+    "static/js/2.43b2ed90.chunk.js.map": "/carsharing/static/js/2.43b2ed90.chunk.js.map",
     "index.html": "/carsharing/index.html",
-    "precache-manifest.79e870fca1ae5f0c55df3c719dd18770.js": "/carsharing/precache-manifest.79e870fca1ae5f0c55df3c719dd18770.js",
+    "precache-manifest.d323d1bce4c8ac04f281e32e14a0759c.js": "/carsharing/precache-manifest.d323d1bce4c8ac04f281e32e14a0759c.js",
     "service-worker.js": "/carsharing/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/carsharing/static/css/2.de424728.chunk.css.map",
-    "static/css/main.810c27a4.chunk.css.map": "/carsharing/static/css/main.810c27a4.chunk.css.map",
-    "static/js/2.41885356.chunk.js.LICENSE.txt": "/carsharing/static/js/2.41885356.chunk.js.LICENSE.txt",
+    "static/css/main.a101634a.chunk.css.map": "/carsharing/static/css/main.a101634a.chunk.css.map",
+    "static/js/2.43b2ed90.chunk.js.LICENSE.txt": "/carsharing/static/js/2.43b2ed90.chunk.js.LICENSE.txt",
     "static/media/Group.svg": "/carsharing/static/media/Group.7cc0558f.svg",
     "static/media/main.scss": "/carsharing/static/media/telegram.72cf4fdf.svg",
     "static/media/Vector_order_page.svg": "/carsharing/static/media/Vector_order_page.7f93b984.svg",
@@ -41,8 +41,8 @@
   "entrypoints": [
     "static/js/runtime-main.fb4b239a.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.41885356.chunk.js",
-    "static/css/main.810c27a4.chunk.css",
-    "static/js/main.003dc85d.chunk.js"
+    "static/js/2.43b2ed90.chunk.js",
+    "static/css/main.a101634a.chunk.css",
+    "static/js/main.90283db2.chunk.js"
   ]
 }
